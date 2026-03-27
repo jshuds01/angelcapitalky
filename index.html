@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kentuckiana Angel Investment Report — March 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme="light"]{
+  --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+  --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
+  --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
+  --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+  --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+  --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+  --text-hero:clamp(2.8rem,.5rem + 5.5vw,5.5rem);
+  --sp1:.25rem;--sp2:.5rem;--sp3:.75rem;--sp4:1rem;--sp5:1.25rem;
+  --sp6:1.5rem;--sp8:2rem;--sp10:2.5rem;--sp12:3rem;--sp16:4rem;--sp20:5rem;
+  --bg:#f7f6f1;--surf:#f9f8f4;--surf2:#fcfbf9;--surf3:#f2efe9;
+  --div:#dddad4;--brd:#d0cdc7;
+  --txt:#28251c;--muted:#6e6c66;--faint:#b8b6b1;
+  --pri:#016870;--prih:#0a4e54;
+  --acc:#b54b1c;--acc-bg:#f6ece7;
+  --gold:#977000;--gold-bg:#f5efda;
+  --grn:#3b6e1a;--grn-bg:#e6f2dc;
+  --blu:#165889;--blu-bg:#dceaf6;
+  --pur:#5a2d9f;--pur-bg:#eee0ff;
+  --ora:#c06a00;--ora-bg:#faeacc;
+  --sh-sm:0 1px 3px oklch(.2 .01 80/.06);
+  --sh-md:0 4px 18px oklch(.2 .01 80/.10);
+  --sh-lg:0 14px 44px oklch(.2 .01 80/.14);
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1.25rem;--r-full:9999px;
+  --trans:180ms cubic-bezier(.16,1,.3,1);
+  --w-n:680px;--w-d:1040px;--w-w:1300px;
+  --font-d:'Playfair Display',Georgia,serif;
+  --font-b:'Inter',system-ui,sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#121110;--surf:#191815;--surf2:#1e1d1a;--surf3:#232120;
+  --div:#272522;--brd:#323028;
+  --txt:#d3d0cc;--muted:#807d78;--faint:#4c4a46;
+  --pri:#4d9ea6;--prih:#2b8690;
+  --acc:#e07052;--acc-bg:#3a2218;
+  --gold:#d2a41e;--gold-bg:#2d2710;
+  --grn:#57a836;--grn-bg:#192e0f;
+  --blu:#539ad0;--blu-bg:#142338;
+  --pur:#976de0;--pur-bg:#281540;
+  --ora:#f5a030;--ora-bg:#2e2010;
+  --sh-sm:0 1px 3px oklch(0 0 0/.25);
+  --sh-md:0 4px 18px oklch(0 0 0/.38);
+  --sh-lg:0 14px 44px oklch(0 0 0/.50);
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){
+  --bg:#121110;--surf:#191815;--surf2:#1e1d1a;--surf3:#232120;
+  --div:#272522;--brd:#323028;
+  --txt:#d3d0cc;--muted:#807d78;--faint:#4c4a46;
+  --pri:#4d9ea6;--prih:#2b8690;
+  --acc:#e07052;--acc-bg:#3a2218;
+  --gold:#d2a41e;--gold-bg:#2d2710;
+  --grn:#57a836;--grn-bg:#192e0f;
+  --blu:#539ad0;--blu-bg:#142338;
+  --pur:#976de0;--pur-bg:#281540;
+  --ora:#f5a030;--ora-bg:#2e2010;
+}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sp16);-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-b);font-size:var(--text-base);color:var(--txt);background:var(--bg);line-height:1.65;min-height:100dvh}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--pri);text-decoration:none;transition:color var(--trans)}
+a:hover{color:var(--prih)}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.12}
+p,li{text-wrap:pretty}
+button{cursor:pointer;font:inherit;border:none;background:none}
+::selection{background:oklch(from var(--pri) l c h/.2)}
+:focus-visible{outline:2px solid var(--pri);outline-offset:3px;border-radius:var(--r-sm)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ── LAYOUT ── */
+.wrap{max-width:var(--w-d);margin-inline:auto;padding-inline:var(--sp6)}
+.wrap--w{max-width:var(--w-w);margin-inline:auto;padding-inline:var(--sp6)}
+.wrap--n{max-width:var(--w-n);margin-inline:auto;padding-inline:var(--sp6)}
+
+/* ── HEADER ── */
+.hdr{position:sticky;top:0;z-index:100;padding:var(--sp3) 0;
+  background:color-mix(in oklch,var(--bg) 88%,transparent);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid oklch(from var(--txt) l c h/.08)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--sp4)}
+.logo{display:flex;align-items:center;gap:var(--sp3);font-size:var(--text-sm);font-weight:700;color:var(--txt);letter-spacing:.04em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:var(--sp2)}
+.nav-a{font-size:var(--text-xs);font-weight:500;color:var(--muted);padding:var(--sp2) var(--sp3);border-radius:var(--r-md);transition:color var(--trans),background var(--trans);letter-spacing:.02em;text-transform:uppercase}
+.nav-a:hover{color:var(--txt);background:oklch(from var(--txt) l c h/.06)}
+.tog{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--r-md);color:var(--muted);transition:color var(--trans),background var(--trans)}
+.tog:hover{color:var(--txt);background:oklch(from var(--txt) l c h/.08)}
+
+/* ── HERO ── */
+.hero{padding:clamp(var(--sp16),10vw,var(--sp20)) 0 clamp(var(--sp12),7vw,var(--sp16));
+  border-bottom:1px solid var(--div);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 65% 55% at 82% 48%,color-mix(in oklch,var(--pri) 7%,transparent),transparent);
+  pointer-events:none}
+.eyebrow{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pri);margin-bottom:var(--sp4);display:flex;align-items:center;gap:var(--sp2)}
+.eyebrow::before{content:'';display:block;width:22px;height:2px;background:currentColor;border-radius:2px}
+.hero h1{font-family:var(--font-d);font-size:var(--text-hero);font-weight:900;color:var(--txt);line-height:1.05;margin-bottom:var(--sp5);max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--pri)}
+.h-bar{width:36px;height:3px;background:var(--acc);border-radius:2px;margin:var(--sp5) 0}
+.h-meta{display:flex;flex-wrap:wrap;gap:var(--sp6);margin-bottom:var(--sp8)}
+.h-stat .num{font-size:var(--text-xl);font-weight:700;font-family:var(--font-d);color:var(--txt);line-height:1}
+.h-stat .lbl{font-size:var(--text-xs);color:var(--muted);margin-top:var(--sp1);text-transform:uppercase;letter-spacing:.05em}
+.h-desc{font-size:var(--text-base);color:var(--muted);max-width:62ch;line-height:1.7}
+
+/* ── FILTER ── */
+.fbar{padding:var(--sp4) 0;border-bottom:1px solid var(--div);position:sticky;top:52px;z-index:90;background:var(--bg)}
+.fb-in{display:flex;align-items:center;gap:var(--sp3);flex-wrap:wrap}
+.fb-lbl{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-right:var(--sp1)}
+.fb-btn{font-size:var(--text-xs);font-weight:500;padding:var(--sp2) var(--sp4);border-radius:var(--r-full);border:1px solid var(--brd);background:var(--surf);color:var(--muted);cursor:pointer;transition:all var(--trans);letter-spacing:.02em}
+.fb-btn:hover,.fb-btn.active{border-color:var(--pri);background:color-mix(in oklch,var(--pri) 9%,var(--surf));color:var(--pri);font-weight:600}
+.srch{margin-left:auto;padding:var(--sp2) var(--sp4);border-radius:var(--r-full);border:1px solid var(--brd);background:var(--surf);color:var(--txt);font-size:var(--text-xs);outline:none;width:200px;transition:border-color var(--trans),box-shadow var(--trans);font-family:var(--font-b)}
+.srch::placeholder{color:var(--faint)}
+.srch:focus{border-color:var(--pri);box-shadow:0 0 0 3px color-mix(in oklch,var(--pri) 14%,transparent)}
+
+/* ── CARD GRID ── */
+.grid{padding:clamp(var(--sp8),5vw,var(--sp16)) 0;display:grid;grid-template-columns:1fr;gap:var(--sp8)}
+
+/* ── CARDS ── */
+.card{background:var(--surf);border:1px solid oklch(from var(--txt) l c h/.08);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-sm);transition:box-shadow var(--trans),transform var(--trans)}
+.card:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.card-hdr{padding:var(--sp5) var(--sp8);display:grid;grid-template-columns:1fr auto;align-items:start;gap:var(--sp4);border-bottom:1px solid oklch(from var(--txt) l c h/.07);position:relative}
+.card-hdr::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:var(--r-xl) 0 0 0}
+.s-clean .card-hdr::before{background:var(--grn)}
+.s-bio .card-hdr::before{background:var(--blu)}
+.s-fem .card-hdr::before{background:var(--acc)}
+.s-ed .card-hdr::before{background:var(--gold)}
+.s-gov .card-hdr::before{background:var(--pur)}
+.s-mfg .card-hdr::before{background:var(--ora)}
+.s-ret .card-hdr::before{background:#8a4ab0}
+.s-air .card-hdr::before{background:#2060b0}
+.s-hlt .card-hdr::before{background:var(--pri)}
+.s-mat .card-hdr::before{background:#007a60}
+.tg{padding-left:var(--sp3)}
+.c-num{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:var(--sp2)}
+.c-name{font-family:var(--font-d);font-size:var(--text-xl);font-weight:700;color:var(--txt);line-height:1.1;margin-bottom:var(--sp2)}
+.c-loc{font-size:var(--text-xs);color:var(--muted)}
+.bdgs{display:flex;flex-direction:column;align-items:flex-end;gap:var(--sp2)}
+.bdg{display:inline-flex;align-items:center;gap:var(--sp1);font-size:var(--text-xs);font-weight:600;padding:var(--sp1) var(--sp3);border-radius:var(--r-full);white-space:nowrap}
+.bdg-sec{background:var(--surf3);color:var(--muted);border:1px solid var(--brd)}
+.bdg-raise{background:color-mix(in oklch,var(--grn) 12%,var(--surf));color:var(--grn);border:1px solid color-mix(in oklch,var(--grn) 25%,transparent)}
+.bdg-closed{background:color-mix(in oklch,var(--gold) 12%,var(--surf));color:var(--gold);border:1px solid color-mix(in oklch,var(--gold) 25%,transparent)}
+.bdg-accel{background:color-mix(in oklch,var(--pur) 12%,var(--surf));color:var(--pur);border:1px solid color-mix(in oklch,var(--pur) 25%,transparent)}
+.bdg-sbir{background:color-mix(in oklch,var(--blu) 12%,var(--surf));color:var(--blu);border:1px solid color-mix(in oklch,var(--blu) 25%,transparent)}
+.cbody{padding:var(--sp5) var(--sp8)}
+.cdesc{font-size:var(--text-base);color:var(--muted);line-height:1.67;margin-bottom:var(--sp6);max-width:82ch}
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:var(--sp4) var(--sp5);margin-bottom:var(--sp5)}
+.dl .dt{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:var(--sp1)}
+.dl .dd{font-size:var(--text-sm);color:var(--txt);line-height:1.5}
+.dd strong{font-weight:600}
+.dd.hi-g{font-weight:700;color:var(--grn);font-size:var(--text-base)}
+.dd.hi-p{font-weight:700;color:var(--pri);font-size:var(--text-base)}
+.hr{border:none;border-top:1px solid oklch(from var(--txt) l c h/.07);margin:var(--sp5) 0}
+.sec-t{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);margin-bottom:var(--sp3)}
+.pills{display:flex;flex-wrap:wrap;gap:var(--sp2);margin-top:var(--sp2)}
+.pill{font-size:var(--text-xs);padding:var(--sp1) var(--sp3);border-radius:var(--r-full);background:color-mix(in oklch,var(--pri) 7%,var(--surf));color:var(--muted);border:1px solid color-mix(in oklch,var(--pri) 14%,transparent)}
+
+/* ── INVESTMENT BAR ── */
+.ibar{margin-top:var(--sp5);padding:var(--sp5) var(--sp6);background:var(--surf2);border:1px solid oklch(from var(--txt) l c h/.07);border-radius:var(--r-lg);display:grid;grid-template-columns:1fr auto;align-items:center;gap:var(--sp4)}
+.il .il-lbl{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.07em;font-weight:600;color:var(--faint);margin-bottom:var(--sp1)}
+.il .il-amt{font-family:var(--font-d);font-size:var(--text-lg);font-weight:700;color:var(--txt)}
+.il .il-amt .raise{color:var(--grn)}
+.il .il-use{font-size:var(--text-xs);color:var(--muted);margin-top:var(--sp1);max-width:58ch}
+.ia{display:flex;flex-direction:column;gap:var(--sp2);align-items:flex-end}
+.btn{display:inline-flex;align-items:center;gap:var(--sp2);padding:var(--sp2) var(--sp5);border-radius:var(--r-md);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:all var(--trans);white-space:nowrap}
+.btn-p{background:var(--pri);color:#fff;border:1px solid transparent}
+.btn-p:hover{background:var(--prih);color:#fff}
+.btn-o{background:transparent;color:var(--muted);border:1px solid var(--brd)}
+.btn-o:hover{color:var(--txt);border-color:var(--muted)}
+.btn-d{background:var(--surf3);color:var(--faint);border:1px solid var(--brd);pointer-events:none}
+
+/* ── ECO ── */
+.eco{padding:clamp(var(--sp12),7vw,var(--sp20)) 0;background:var(--surf);border-top:1px solid var(--div);border-bottom:1px solid var(--div)}
+.eco-h{margin-bottom:var(--sp10)}
+.s-ey{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--pri);margin-bottom:var(--sp3);display:flex;align-items:center;gap:var(--sp2)}
+.s-ey::before{content:'';display:block;width:18px;height:2px;background:currentColor;border-radius:2px}
+.s-ti{font-family:var(--font-d);font-size:var(--text-xl);font-weight:700;color:var(--txt);margin-bottom:var(--sp3)}
+.s-de{font-size:var(--text-base);color:var(--muted);max-width:66ch;line-height:1.7}
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:var(--sp5);margin-top:var(--sp8)}
+.ic{background:var(--surf2);border:1px solid oklch(from var(--txt) l c h/.08);border-radius:var(--r-lg);padding:var(--sp5) var(--sp6)}
+.ic-n{font-weight:700;font-size:var(--text-base);color:var(--txt);margin-bottom:var(--sp1)}
+.ic-t{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600;margin-bottom:var(--sp3)}
+.ic-d{font-size:var(--text-xs);color:var(--muted);line-height:1.65}
+.ic-d strong{color:var(--txt);font-weight:600}
+
+/* ── DISC ── */
+.disc-s{padding:var(--sp8) 0}
+.disc{font-size:var(--text-xs);color:var(--faint);line-height:1.65;padding:var(--sp5) var(--sp6);background:var(--surf);border:1px solid var(--div);border-radius:var(--r-lg)}
+
+/* ── FOOTER ── */
+.ftr{padding:var(--sp8) 0;border-top:1px solid var(--div)}
+.ftr-in{display:flex;align-items:center;justify-content:space-between;gap:var(--sp4);flex-wrap:wrap}
+.ftr-t{font-size:var(--text-xs);color:var(--faint)}
+.ftr-t strong{color:var(--muted);font-weight:600}
+
+/* ── BACK TO TOP ── */
+.btt{position:fixed;bottom:var(--sp6);right:var(--sp6);z-index:200;width:40px;height:40px;border-radius:50%;background:var(--pri);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-md);opacity:0;pointer-events:none;transition:opacity var(--trans),transform var(--trans)}
+.btt.vis{opacity:1;pointer-events:auto}
+.btt:hover{background:var(--prih);transform:translateY(-2px)}
+
+.hidden{display:none!important}
+
+@media(max-width:780px){
+  .nav .nav-a{display:none}
+  .card-hdr{grid-template-columns:1fr}
+  .bdgs{flex-direction:row;align-items:flex-start}
+  .cbody,.card-hdr{padding:var(--sp5)}
+  .ibar{grid-template-columns:1fr}
+  .ia{flex-direction:row;align-items:flex-start}
+}
+@media(max-width:500px){
+  .h-meta{gap:var(--sp4)}
+  .dg{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap--w">
+    <div class="hdr-in">
+      <div class="logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-label="Kentuckiana region icon">
+          <circle cx="13" cy="13" r="12" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+          <path d="M6 18.5L9 12.5L13 8.5L17.5 10.5L19.5 15.5L16.5 18.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="13" cy="7.5" r="1.8" fill="currentColor" opacity=".5"/>
+          <path d="M9 12.5L7.5 16.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M13 8.5L13 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        KentuckianaStartups
+      </div>
+      <nav class="nav">
+        <a href="#startups" class="nav-a">Startups</a>
+        <a href="#ecosystem" class="nav-a">Ecosystem</a>
+        <a href="#notes" class="nav-a">Notes</a>
+        <button class="tog" data-theme-toggle aria-label="Toggle dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Angel Investment Intelligence &mdash; March 27, 2026</p>
+    <h1>Kentuckiana<br><em>Startups</em><br>Seeking Capital</h1>
+    <div class="h-bar"></div>
+    <div class="h-meta">
+      <div class="h-stat"><div class="num">12</div><div class="lbl">Companies Profiled</div></div>
+      <div class="h-stat"><div class="num">$148M+</div><div class="lbl">KY Deals Jan–Jul 2025</div></div>
+      <div class="h-stat"><div class="num">40%</div><div class="lbl">Angel Tax Credit</div></div>
+      <div class="h-stat"><div class="num">5</div><div class="lbl">VC Firms @ SparkHaus NKY</div></div>
+    </div>
+    <p class="h-desc">A curated intelligence report of early-stage companies in the Louisville, Southern Indiana, and Northern Kentucky corridor actively seeking or recently receiving angel and seed investment as of March 2026. Includes founders, product phase, financials, market strategy, and investor resources.</p>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="fbar">
+  <div class="wrap--w">
+    <div class="fb-in">
+      <span class="fb-lbl">Filter:</span>
+      <button class="fb-btn active" data-filter="all">All (12)</button>
+      <button class="fb-btn" data-filter="raising">🟢 Actively Raising</button>
+      <button class="fb-btn" data-filter="biotech">BioTech</button>
+      <button class="fb-btn" data-filter="healthtech">HealthTech</button>
+      <button class="fb-btn" data-filter="edtech">EdTech/AI</button>
+      <button class="fb-btn" data-filter="louisville">Louisville</button>
+      <button class="fb-btn" data-filter="nky">NKY</button>
+      <button class="fb-btn" data-filter="indiana">S. Indiana</button>
+      <button class="fb-btn" data-filter="sbir">SBIR/Grant</button>
+      <input class="srch" type="search" placeholder="Search company…" aria-label="Search startups" id="srch">
+    </div>
+  </div>
+</div>
+
+<!-- STARTUP PROFILES -->
+<section id="startups" aria-label="Startup profiles">
+<div class="wrap--w">
+<div class="grid" id="cGrid">
+
+<!-- ════════ 01 SOFAB INKS ════════ -->
+<article class="card s-clean"
+  data-sector="cleantech solar" data-region="louisville" data-status="raising"
+  data-name="sofab inks perovskite solar">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">01 · CleanTech</div>
+      <h2 class="c-name">Sofab Inks</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Founded 2022 &nbsp;·&nbsp; UofL Conn Center Spinout</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">Perovskite Solar Materials</span>
+      <span class="bdg bdg-raise">🟢 $6M Seed — Term Sheet Signed Mar 2026</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Sofab Inks manufactures specialty charge-transport-layer inks — SnO₂ and NiOx materials — that enable high-efficiency, low-cost perovskite solar cell production. Spun out of UofL's Conn Center for Renewable Energy Research in 2022, the company has global customers reporting 24–25% cell efficiencies. An initial $200K DOE prize, $628K oversubscribed pre-seed round in early 2025, and a $1.2M pre-seed close in mid-2025 built the foundation. In March 2026, Sofab signed a term sheet for a $6M seed round led by Cloudberry Ventures (UK) and is actively bringing in co-investors.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Blake Martin, PhD (CEO) &nbsp;·&nbsp; Peter Armstrong (CTO) &nbsp;·&nbsp; Jack Manzella (COO) &nbsp;·&nbsp; Sashil Chapagain (CSO)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Commercial Revenue</strong> — inks in customer production lines; Fortune 500 purchase orders secured; 45+ global customer tests</div></div>
+      <div class="dl"><div class="dt">Revenue / Traction</div><div class="dd hi-g">$600K Japanese purchase order + Fortune 500 POs</div></div>
+      <div class="dl"><div class="dt">Total Funding To Date</div><div class="dd hi-p">$1.83M+ (DOE prize + $628K pre-seed + $1.2M pre-seed)</div></div>
+      <div class="dl"><div class="dt">Key Investors</div><div class="dd">Keyhorse Capital, Snocap Ventures, EGB Capital, Saunders Capital, Bluegrass Angels</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Targeting Asian solar manufacturers; building U.S. manufacturing capacity; expanding into EU solar market via Cloudberry's network</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">⚡ 20.4% cell efficiency on flexible substrate (lab)</span>
+      <span class="pill">🌍 45+ global customers testing</span>
+      <span class="pill">🇯🇵 $600K Japanese purchase order</span>
+      <span class="pill">📦 Fortune 500 purchase orders</span>
+      <span class="pill">🔬 UofL Conn Center spinout</span>
+      <span class="pill">🏅 Vogt Awards alumnus &nbsp;·&nbsp; Amplify Louisville</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Active Round</div>
+        <div class="il-amt"><span class="raise">$6M Seed</span> — Cloudberry Ventures (UK) leading at $2M initial</div>
+        <div class="il-use">Term sheet signed March 19, 2026. Full $6M round not yet closed — co-investors actively being sought. Proceeds for manufacturing scale-up and U.S. production expansion. Contact via LinkedIn (Jack Manzella, COO) or cofounders@sofabinks.com.</div>
+      </div>
+      <div class="ia">
+        <a href="https://perovskite-info.com/sofab-inks-secures-lead-investor-6-million-seed-round" class="btn btn-o" target="_blank" rel="noopener">Round Coverage ↗</a>
+        <span class="btn btn-d">No Public Deck</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 02 CREOSALUS ════════ -->
+<article class="card s-bio"
+  data-sector="biotech medtech oncology sbir" data-region="louisville" data-status="raising"
+  data-name="creosalus glioblastoma brain cancer CED">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">02 · BioTech / MedTech</div>
+      <h2 class="c-name">CreoSalus Inc.</h2>
+      <p class="c-loc">📍 1044 E. Chestnut St., Louisville, KY &nbsp;·&nbsp; Founded ~2018</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">Neuro-Oncology · Drug Delivery</span>
+      <span class="bdg bdg-raise">🟢 Post-Phase II SBIR — Seeking Commercial Investment</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">CreoSalus has developed the Porous Brain Infusion Catheter (PBIC) System — a precision convection-enhanced delivery (CED) device that significantly increases therapeutic coverage of glioblastoma (GBM) tumors. The system pairs the PBIC catheter with FDA 510(k)-cleared Molecular Flow Simulations (MFS) software to plan and execute tumor-targeted drug delivery that overcomes the blood-brain barrier. With $4.5M in Phase II SBIR awards from the NCI, the company is advancing toward a first-in-human clinical study. The February 2026 SBIR state matching grant awarded by Gov. Beshear confirmed ongoing active investment attention.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founder / Team</div><div class="dd">22 employees; leadership team not fully public; contact via sbir.gov profile</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Pre-Clinical → First-In-Human</strong> — MFS software FDA 510(k) cleared; PBIC catheter advancing to human trials</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd">Pre-revenue; SBIR-funded R&D; FDA cleared software commercially available</div></div>
+      <div class="dl"><div class="dt">Total Funding</div><div class="dd hi-p">$4.53M SBIR Phase II (NCI) + Feb 2026 KY state matching grant</div></div>
+      <div class="dl"><div class="dt">Market</div><div class="dd">GBM affects ~13,000 U.S. patients/yr; CED drug delivery market ~$1.2B globally; FDA breakthrough designation pathway</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Partner with neurosurgery centers for FIH study; pursue FDA IDE; license to biopharma for clinical stage delivery</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🧠 $4.53M NCI Phase II SBIR</span>
+      <span class="pill">✅ MFS Software FDA 510(k) cleared</span>
+      <span class="pill">🏛 Feb 2026 KY SBIR State Matching Grant</span>
+      <span class="pill">👥 22 employees</span>
+      <span class="pill">🏥 Preclinical in vivo proof completed</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Investment Status</div>
+        <div class="il-amt"><span class="raise">Seeking Angel / Series A Co-Investment</span></div>
+        <div class="il-use">SBIR-validated, FDA-cleared oncology device at clinical pivot point. Strong fit for healthcare angels and MedTech strategic investors. Contact through KY Innovation Hub or directly. 1044 E Chestnut St, Louisville, KY 40204.</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.sbir.gov/portfolio/413020" class="btn btn-o" target="_blank" rel="noopener">SBIR Profile ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 03 ENDONAVIS ════════ -->
+<article class="card s-bio"
+  data-sector="biotech medtech gastro sbir" data-region="louisville" data-status="raising"
+  data-name="endonavis GI endoscopy variceal hemorrhage">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">03 · BioTech / MedTech</div>
+      <h2 class="c-name">EndoNavis LLC</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Active SBIR Recipient 2026</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">GI Endoscopy · Cirrhosis / Hemorrhage</span>
+      <span class="bdg bdg-sbir">🏛 SBIR-Funded — Seeking Angel Co-Investment</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">EndoNavis is engineering single-use, low-profile disposable endoscopes for novel GI clinical applications — specifically targeting the life-threatening variceal hemorrhaging that occurs in cirrhosis patients. Upper GI variceal bleeding is one of the most dangerous acute complications of cirrhosis, with high mortality rates and significant healthcare costs. EndoNavis received a February 2026 Kentucky SBIR state matching grant from Gov. Beshear (part of the $862K round), matching an NCI/federal SBIR award for advancing this specialized endoscope technology toward commercialization.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders / Team</div><div class="dd">Leadership details not fully public; KY-based; contact through KY Innovation / Louisville Metro</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Advanced R&D / Pre-Commercial</strong> — SBIR-validated device; advancing toward clinical use application</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd">Pre-revenue; federally funded R&D stage</div></div>
+      <div class="dl"><div class="dt">Funding</div><div class="dd hi-p">Federal SBIR award + Feb 2026 KY state SBIR matching grant</div></div>
+      <div class="dl"><div class="dt">Market</div><div class="dd">~$6B GI endoscopy disposables market; cirrhosis affects 4.5M+ U.S. patients</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Clinical validation at academic medical centers; FDA 510(k) pathway; strategic acquirer or licensing to major endoscopy OEMs</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏛 Feb 2026 KY SBIR State Matching Grant</span>
+      <span class="pill">🩺 Federal NIH/NCI SBIR award (matched)</span>
+      <span class="pill">🔬 Single-use disposable endoscope innovation</span>
+      <span class="pill">🏥 Louisville-based clinical R&D</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Investment Opportunity</div>
+        <div class="il-amt"><span class="raise">Angel / Seed Co-Investment Sought</span></div>
+        <div class="il-use">Federally-validated (SBIR) GI medtech at R&D-to-clinical stage. Strong candidate for KY Angel Investment Tax Credit (40% credit). Access via KY Innovation Network or KY Cabinet for Economic Development.</div>
+      </div>
+      <div class="ia">
+        <a href="https://newkentuckyhome.ky.gov/Newsroom/NewsPage/20260226_SBIRAwardees" class="btn btn-o" target="_blank" rel="noopener">Grant Announcement ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 04 DESICORP ════════ -->
+<article class="card s-bio"
+  data-sector="biotech defense medicine blood" data-region="louisville" data-status="closed"
+  data-name="desicorp blood cells lyophilization military">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">04 · BioTech / Defense Medicine</div>
+      <h2 class="c-name">DesiCorp Inc.</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Founded 2017 &nbsp;·&nbsp; UofL Research Spinout</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">BioTech · Blood Storage · Defense / Space</span>
+      <span class="bdg bdg-closed">✅ $5M Seed — Keyhorse Capital Led</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">DesiCorp is pioneering freeze-dried (lyophilized) red blood cells that can be stored for 42+ days without refrigeration using their HFAL cell-loading platform. Founded by UofL researchers who developed acoustofluidic technology to load protective compounds into RBCs before drying, the company has secured funding from DoD, NASA, NIH, and NSF. The 2025 seed round led by Keyhorse Capital ($5M) positions the company for clinical validation. Follow-on angel investment opportunities may exist as the company approaches IND submission and expands toward hospital supply chains and humanitarian use.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Brett Janis (CEO) &nbsp;·&nbsp; Dr. Jonathan Kopechek &nbsp;·&nbsp; Dr. Michael Menze (UofL researchers)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Pre-Clinical → IND Filing</strong> — lyophilized RBC prototype proven; Phase I SBIR (Defense Health Agency) received; advancing to clinical validation</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd">Pre-revenue; grant + seed funded; research licensing potential</div></div>
+      <div class="dl"><div class="dt">Total Funding</div><div class="dd hi-p">$606K Phase I SBIR + $5M seed (Keyhorse 2025) + NASA/NIH/NSF grants = ~$7M+</div></div>
+      <div class="dl"><div class="dt">Investors</div><div class="dd">Keyhorse Capital (lead) + undisclosed angels; Defense Health Agency SBIR</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">DoD battlefield medicine primary; hospital blood bank + humanitarian secondary; NASA space medicine emerging; licensing to major blood bag manufacturers</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🇺🇸 DoD / Defense Health Agency SBIR Phase I</span>
+      <span class="pill">🚀 NASA-funded blood research</span>
+      <span class="pill">💰 $5M seed closed 2025</span>
+      <span class="pill">🩸 42+ day ambient storage achieved</span>
+      <span class="pill">📄 iScience peer-reviewed publication</span>
+      <span class="pill">🔬 UofL HFAL acoustofluidic platform</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Funding Status</div>
+        <div class="il-amt">Seed Closed — <span class="raise">Follow-On / Co-Invest Inquiries Welcome</span></div>
+        <div class="il-use">Seed round closed. Contact DesiCorp or Keyhorse Capital directly for co-investment interest. 201 E Jefferson St Ste 309, Louisville, KY 40202. Strong KY Angel Tax Credit eligibility (40%).</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.keyhorse.vc" class="btn btn-o" target="_blank" rel="noopener">Keyhorse Capital ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 05 SIMBRYO ════════ -->
+<article class="card s-fem"
+  data-sector="femtech biotech fertility ivf" data-region="nky" data-status="raising"
+  data-name="simbryo technologies IVF fertility organoid">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">05 · FemTech / BioTech</div>
+      <h2 class="c-name">Simbryo Technologies</h2>
+      <p class="c-loc">📍 OneNKY Center, Covington, NKY &nbsp;·&nbsp; Founded 2023 &nbsp;·&nbsp; Commercial Launch Oct 2025</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">IVF · Endometrial Organoids · FemTech</span>
+      <span class="bdg bdg-raise">🟢 Actively Seeking Seed Investment</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Simbryo Technologies has launched Simbryo FX — the world's first personalized functional fertility assay that uses a patient's own biopsy tissue to create 3D endometrial organoids, then implants blastoids (stem cell-based embryo models) to quantify endometrial fertility before IVF transfer. Unlike existing tests that check timing or infection, Simbryo FX measures whether the uterus is functionally ready to receive an embryo — addressing the most common cause of costly failed IVF transfers. Commercially launched October 2025, the company is operating from LifeSciKY's wet lab in Covington and was named a 2026 KY Inno Startup to Watch and a 2026 Cincy Inno Fire Awards finalist.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Dr. Yael Katz (Founder/CEO) &nbsp;·&nbsp; Scott Novich (COO)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Commercial — Early Revenue</strong> — Simbryo FX assay live October 2025; partnership with Cincinnati Children's Hospital; offered to IVF clinics</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd hi-g">Early commercial revenue — ramping post Oct 2025 launch</div></div>
+      <div class="dl"><div class="dt">Prior Funding</div><div class="dd hi-p">$500K NKY expansion investment + LifeSciKY incubator</div></div>
+      <div class="dl"><div class="dt">Awards</div><div class="dd">2026 KY Inno Startup to Watch &nbsp;·&nbsp; 2026 Cincy Inno Fire Awards Finalist &nbsp;·&nbsp; ASRM 2025 presenter</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Direct-to-IVF-clinic sales; Cincinnati Children's Hospital as anchor partner; building toward national payer reimbursement; $27B global IVF market</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🔬 World's first endometrial organoid IVF assay</span>
+      <span class="pill">🏥 Cincinnati Children's Hospital partnership</span>
+      <span class="pill">🚀 Commercial launch Oct 2025</span>
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">🥈 Cincy Inno Fire Awards 2026 Finalist</span>
+      <span class="pill">🧪 LifeSciKY OneNKY wet lab tenant</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Raising</div>
+        <div class="il-amt"><span class="raise">Seed Round</span> — target not publicly disclosed</div>
+        <div class="il-use">Highly differentiated FemTech in the high-growth IVF market with a live product, hospital partnership, and commercial traction. Contact: simbryotech.com or via LifeSciKY at OneNKY Center, Covington, KY.</div>
+      </div>
+      <div class="ia">
+        <a href="https://simbryotech.com" class="btn btn-o" target="_blank" rel="noopener">Website ↗</a>
+        <a href="https://www.globenewswire.com/news-release/2025/10/27/3174473/0/en/Simbryo-Technologies-Introduces-Personalized-Assay-to-Help-IVF-Patients-Avoid-Repeated-Failed-Transfers.html" class="btn btn-o" target="_blank" rel="noopener">Launch PR ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 06 DUE GOODER ════════ -->
+<article class="card s-ed"
+  data-sector="edtech ai productivity" data-region="louisville" data-status="raising"
+  data-name="due gooder syllabus AI college deadlines">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">06 · EdTech / AI</div>
+      <h2 class="c-name">Due Gooder</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Founded 2024 &nbsp;·&nbsp; UofL Sandbox</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">EdTech · AI Productivity · College</span>
+      <span class="bdg bdg-raise">🟢 Seed Round — 21,500+ Users</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Due Gooder is an AI-powered web platform that solves college students' #1 pain point: managing deadlines across multiple courses. Students upload their syllabi; the AI automatically extracts all due dates, builds a smart calendar, and sends reminders. What started as a UofL Sandbox project grew to 21,500 users at 2,100+ universities by November 2025. The student-founder team secured $90K in pre-seed funding, received a Keyhorse Capital investment in 2025, and won a $25K Vogt Award, establishing themselves as one of Louisville's fastest-growing student startups.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Nate Royal &nbsp;·&nbsp; Finn McCormack &nbsp;·&nbsp; Ethan Havertape (UofL undergraduates)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Live with Traction</strong> — fully functioning product; 21,500+ active users; growing organically</div></div>
+      <div class="dl"><div class="dt">Revenue / Users</div><div class="dd hi-g">21,500+ active users &nbsp;·&nbsp; 2,100+ universities &nbsp;·&nbsp; Freemium model</div></div>
+      <div class="dl"><div class="dt">Funding Raised</div><div class="dd hi-p">$90K pre-seed + Keyhorse Capital + $25K Vogt Award</div></div>
+      <div class="dl"><div class="dt">Accelerators</div><div class="dd">UofL Sandbox &nbsp;·&nbsp; Keyhorse Q3 2025 cohort &nbsp;·&nbsp; Vogt Awards 2025 cohort</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Freemium B2C → B2B institutional licensing; 19M+ U.S. college students; expand to graduate schools and K-12 with syllabus-AI model</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">👥 21,500+ active users</span>
+      <span class="pill">🎓 2,100+ universities represented</span>
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">💰 Keyhorse Capital investment</span>
+      <span class="pill">🏅 Vogt Awards 2025 cohort</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Raising</div>
+        <div class="il-amt"><span class="raise">Seed Round</span> — building on $90K pre-seed base</div>
+        <div class="il-use">Student founders with massive early user traction and strong institutional backing. Seeking capital to monetize their 21K+ user base and develop university licensing. Connect via UofL Sandbox or LinkedIn (Nate Royal / Due Gooder).</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.cflouisville.org/community-support/vogt-awards/" class="btn btn-o" target="_blank" rel="noopener">Vogt Profile ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 07 ESSENTIAL INNOVATIONS ════════ -->
+<article class="card s-gov"
+  data-sector="govtech worktech ai" data-region="louisville" data-status="raising"
+  data-name="essential innovations workforce tax credits WOTC government">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">07 · GovTech / WorkTech</div>
+      <h2 class="c-name">Essential Innovations</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Founded ~2023 &nbsp;·&nbsp; Techstars 2026 Cohort</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">GovTech · Workforce Automation · AI</span>
+      <span class="bdg bdg-accel">🚀 Techstars Workforce Dev 2026 — Co-Invest Opportunity</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Essential Innovations automates the discovery, application, and management of government tax credits, workforce subsidies (WOTC and similar programs), and hiring pipeline incentives for companies and nonprofits. The platform removes bureaucratic friction that leaves billions in unclaimed credits on the table, helping businesses access talent from underserved populations while strengthening their workforce ROI. Ben Reno-Weber joined Techstars' Workforce Development accelerator in March 2026 — a program that typically invests $120K for ~6% equity — and was named a 2026 KY Inno Startup to Watch.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founder</div><div class="dd">Ben Reno-Weber (CEO &amp; Co-Founder) — ecosystem connection via Theresa Reno-Weber (GoodMaps, Endeavor Louisville)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Revenue-Generating</strong> — platform live with paying customers; workforce program automation deployed</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd hi-g">Revenue-generating with paying customers</div></div>
+      <div class="dl"><div class="dt">Funding Raised</div><div class="dd hi-p">~$120K Techstars investment + $25K Vogt Award + partner grants</div></div>
+      <div class="dl"><div class="dt">Accelerators</div><div class="dd">Techstars Workforce Development 2026 &nbsp;·&nbsp; Vogt Awards 2025 &nbsp;·&nbsp; Louisville AI Week Startup Showcase Feb 2026</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Mid-market employers and nonprofits; WOTC + workforce subsidy market — $100B+ in unclaimed U.S. credits annually; land and expand per employer</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🚀 Techstars Workforce Development 2026</span>
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">🏅 Vogt Awards 2025 cohort</span>
+      <span class="pill">💼 Revenue-generating with paying customers</span>
+      <span class="pill">🌐 Louisville AI Week Showcase Feb 2026</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Investment Opportunity</div>
+        <div class="il-amt"><span class="raise">Seed Round — Raising Alongside Techstars</span></div>
+        <div class="il-use">Techstars companies typically raise follow-on seed rounds during and immediately after their cohort. Angel co-investment alongside Techstars' institutional check is the primary opportunity here. Contact: essentialinno.com or via Ben Reno-Weber on LinkedIn.</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.essentialinno.com" class="btn btn-o" target="_blank" rel="noopener">Website ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 08 NONGO AI ════════ -->
+<article class="card s-mfg"
+  data-sector="manufacturingai industrialtech MRO maintenance" data-region="louisville" data-status="raising"
+  data-name="nongo AI manufacturing maintenance CMMS">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">08 · Industrial AI / Manufacturing</div>
+      <h2 class="c-name">Nongo AI</h2>
+      <p class="c-loc">📍 Louisville, KY &nbsp;·&nbsp; Founded 2024 &nbsp;·&nbsp; Vogt 2025 Cohort</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">Industrial AI · MRO · Manufacturing Tech</span>
+      <span class="bdg bdg-raise">🟢 Seeking Pre-Seed / Angel Investment</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Nongo AI builds an AI-powered troubleshooting assistant for industrial maintenance technicians — a high-impact SaaS platform that integrates with CMMS, work order systems, and inventory management to deliver real-time, context-aware guidance during equipment failures. A hands-free speech-to-text feature auto-documents repair steps, updates work orders, adjusts parts inventory, and captures repair logs while technicians work. Founders Bamba Diop and Sada Wane bring manufacturing operations credibility through the KY FAME program and are piloting with industrial customers in Louisville's manufacturing-heavy economy.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Ahmadou "Bamba" Diop (CEO) &nbsp;·&nbsp; Sada Wane (CTO) — both KY FAME manufacturing alumni</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>MVP / Early Pilot</strong> — core platform built; running pilot engagements with manufacturing customers</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd">Pre-revenue to pilot ARR; POC customers in Louisville manufacturing</div></div>
+      <div class="dl"><div class="dt">Funding Raised</div><div class="dd hi-p">$25K Vogt Award (2025) + potential $25K additional partner grant</div></div>
+      <div class="dl"><div class="dt">Accelerators</div><div class="dd">Vogt Awards 2025 cohort &nbsp;·&nbsp; Vogt Demo Day Nov 2025 (Derby Museum)</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Target Louisville/KY manufacturing base first; integrate with Infor, IBM Maximo, SAP PM; expand via CMMS partner channels. U.S. industrial MRO market ~$700B; unplanned downtime costs U.S. manufacturers $50B+/yr</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏅 Vogt Awards 2025 cohort</span>
+      <span class="pill">🏭 CMMS + work order + inventory integration</span>
+      <span class="pill">🎙️ Hands-free speech-to-text repair documentation</span>
+      <span class="pill">🔧 KY FAME manufacturing community network</span>
+      <span class="pill">🤖 Context-aware AI for industrial equipment</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Raising</div>
+        <div class="il-amt"><span class="raise">Pre-Seed / Angel Round</span> — target not publicly disclosed</div>
+        <div class="il-use">Strong product-market fit for Louisville's manufacturing sector. Ideal for angels with manufacturing/operations backgrounds. Contact via LinkedIn (Nongo AI / Ahmadou Diop) or Community Foundation of Louisville Vogt network.</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.linkedin.com/company/nongoai" class="btn btn-o" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 09 WICKED TECHNOLOGIES ════════ -->
+<article class="card s-hlt"
+  data-sector="healthtech eldercare IoT seniorcare" data-region="louisville" data-status="raising"
+  data-name="wicked technologies smart pad incontinence eldercare">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">09 · HealthTech / Elder Care</div>
+      <h2 class="c-name">Wicked Technologies</h2>
+      <p class="c-loc">📍 4217 Produce Rd., Louisville, KY &nbsp;·&nbsp; Founded 2008 &nbsp;·&nbsp; HealthTech Pivot ~2020</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">Senior Care · IoT · Incontinence Tech</span>
+      <span class="bdg bdg-raise">🟢 RALLY Winner — Eligible $1M IN-Prize + Series B Prep</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Wicked Technologies makes the Wicked Smart Pad™ — a washable, sensorized bed pad detecting as little as 4 oz of moisture and alerting caregivers within 30 seconds via WiFi to mobile and desktop apps. The data-driven system helps senior living operators reduce unnecessary disturbances, optimize staffing, and improve care outcomes for residents with incontinence or dementia. Founded by Alli Truttmann, who originally pioneered moisture-wicking bedding before pivoting to institutional elder care during COVID, the company closed a $2.1M Series A2 from Boomerang Ventures in February 2025 and won the RALLY 2025 Healthcare Track — making it eligible for up to $1M Indiana IN-Prize investment. FDA Class II 510(k) exempt registration is in progress.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founder</div><div class="dd">Alli Truttmann (CEO) — women-led; pioneer in moisture-wicking product category</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Commercial + Scaling</strong> — pilot programs at Atria Senior Living; expanding to 10+ assisted living facilities; FDA 510(k) exempt reg in progress</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd hi-g">Early commercial revenue — facility contracts ramping across KY, IN, OH, IL, NY, NJ, CA</div></div>
+      <div class="dl"><div class="dt">Total Funding</div><div class="dd hi-p">$6.37M total (Keyhorse, Boomerang, VisionTech, Genesys) + RALLY $1M prize eligibility</div></div>
+      <div class="dl"><div class="dt">Awards</div><div class="dd">RALLY 2025 Healthcare Track Winner (eligible $1M IN-Prize) &nbsp;·&nbsp; NIDE Product of Excellence</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Direct to senior living operators; Atria (national chain) as anchor client; reimbursement pathway via Medicare/Medicaid; potential hospital and home health expansion</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏆 RALLY 2025 Healthcare Track Winner</span>
+      <span class="pill">💰 $2.1M Series A2 (Boomerang Ventures, Feb 2025)</span>
+      <span class="pill">🏥 Atria Senior Living pilot partner</span>
+      <span class="pill">🎖 NIDE Product of Excellence</span>
+      <span class="pill">📋 FDA 510(k) exempt registration in progress</span>
+      <span class="pill">💵 Eligible: Up to $1M Indiana IN-Prize</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Investment Opportunity</div>
+        <div class="il-amt"><span class="raise">Eligible: Up to $1M IN-Prize</span> + potential Series B preparation</div>
+        <div class="il-use">Won RALLY 2025 Healthcare Track, making Wicked eligible for Indiana IN-Prize up to $1M. Angels can complement institutional funding as company builds toward Series B. Contact via Boomerang Ventures or directly at wickedtechnologies.com / 4217 Produce Rd, Louisville KY.</div>
+      </div>
+      <div class="ia">
+        <a href="https://www.nonwovens-industry.com/contents/view_breaking-news/2025-02-11/boomerang-ventures-invests-in-wicked-technologies/1530" class="btn btn-o" target="_blank" rel="noopener">Investment PR ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 10 BUMPTUP LABS ════════ -->
+<article class="card s-fem"
+  data-sector="femtech healthtech maternal pregnancy sbir" data-region="louisville" data-status="raising"
+  data-name="bumptup labs maternal health pregnancy app">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">10 · FemTech / Maternal Health</div>
+      <h2 class="c-name">BumptUp Labs Inc.</h2>
+      <p class="c-loc">📍 Bowling Green, KY (Western Kentucky region) &nbsp;·&nbsp; Founded ~2022</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">FemTech · Digital Health · Maternal Care</span>
+      <span class="bdg bdg-raise">🟢 Seeking Seed Capital — Post-Clinical Trial</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">BumptUp Labs has developed an evidence-based digital platform delivering safe, effective, and inclusive physical activity guidance to pregnant and postpartum women. Founded by Dr. Rachel Tinius, an exercise scientist from Western Kentucky University, the platform fills a gap no mainstream fitness app addresses: specific, evidence-based interventions validated for maternal health. BumptUp received SBIR/STTR matching grants from Gov. Beshear in July 2025, is running an active clinical trial with expecting mothers in Bowling Green, and was named a 2026 KY Inno Startup to Watch in March 2026.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founder</div><div class="dd">Rachel Tinius, PhD (CEO) — exercise scientist, WKU faculty; maternal health specialist</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Clinical Trial Stage</strong> — app built and in trial use; enrolling 13–20 week pregnant women; pre-commercial pending trial completion</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd">Pre-revenue; clinical research stage; app distributed to trial participants</div></div>
+      <div class="dl"><div class="dt">Funding Raised</div><div class="dd hi-p">SBIR federal award + KY SBIR state matching (Jul 2025) + WKU research support</div></div>
+      <div class="dl"><div class="dt">Awards</div><div class="dd">2026 KY Inno Startup to Watch &nbsp;·&nbsp; Gov. Beshear SBIR/STTR Award (July 2025)</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">3.6M+ U.S. births annually; maternal health digital app market ~$4B; Medicaid digital therapeutics reimbursement pathway; OB-GYN and hospital system partnerships</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">🔬 Active clinical trial — WKU-backed</span>
+      <span class="pill">🏛 SBIR federal + KY state matching grants</span>
+      <span class="pill">👶 Evidence-based maternal exercise science</span>
+      <span class="pill">🎖 Gov. Beshear SBIR Award Jul 2025</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Raising</div>
+        <div class="il-amt"><span class="raise">Seed Round</span> — targeting commercialization post-clinical trial</div>
+        <div class="il-use">Federal co-investment (SBIR) makes angel capital particularly efficient. Funds will complete the clinical trial and begin commercialization. Contact: info@bumptuplabs.com &nbsp;·&nbsp; (270) 745-5026 &nbsp;·&nbsp; bumptupapp.com</div>
+      </div>
+      <div class="ia">
+        <a href="https://bumptupapp.com" class="btn btn-o" target="_blank" rel="noopener">Website ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 11 PROPER PILOTS ════════ -->
+<article class="card s-air"
+  data-sector="aviationtech edtech drone UAS flight training" data-region="indiana" data-status="raising"
+  data-name="proper pilots flight training aviation UAS drone">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">11 · AviationTech / EdTech</div>
+      <h2 class="c-name">Proper Pilots Inc.</h2>
+      <p class="c-loc">📍 Georgetown, Indiana (Southern Indiana / Kentuckiana) &nbsp;·&nbsp; Founded 2024</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">Flight Training Marketplace · UAS / Drone</span>
+      <span class="bdg bdg-raise">🟢 Seeking Angel / Pre-Seed Investment</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Proper Pilots is a marketplace app connecting student pilots with aircraft, flight schools, and certified instructors — functioning like Uber for flight training. As UAS and drone regulations create explosive demand for certified pilots and FAA Part 107 certificates, traditional flight training remains fragmented and inaccessible. Founders Timothy Tweet and Derrick Simpson won $8,000 at IU Southeast's Next Big Thing Pitch Competition in November 2025, received a $25K Vogt Award, launched 2026 aviation scholarships, have 110 flight schools waiting to join, and were named a 2026 KY Inno Startup to Watch — the only Southern Indiana company on the list.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Timothy Tweet (CEO) &nbsp;·&nbsp; Derrick Simpson (Co-Founder)</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>MVP App — Pre-Revenue</strong> — app built; 110 flight schools waiting; UAS scholarship program live; building student and instructor pipeline before monetization</div></div>
+      <div class="dl"><div class="dt">Revenue / Pipeline</div><div class="dd hi-g">110 flight schools waiting to join &nbsp;·&nbsp; Projecting $3.2M revenue Year 1</div></div>
+      <div class="dl"><div class="dt">Funding Raised</div><div class="dd hi-p">$25K Vogt Award + $8K IU Southeast Next Big Thing win</div></div>
+      <div class="dl"><div class="dt">Awards</div><div class="dd">2026 KY Inno Startup to Watch &nbsp;·&nbsp; Vogt Awards 2025 &nbsp;·&nbsp; IU Southeast Next Big Thing 2025 Winner ($8K)</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Commission marketplace model; target FAA-certified flight schools nationally; UAS/drone sector demand tailwind; $9B pilot training market; 14,500 new drone pilots needed annually through 2028 (FAA)</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">🥇 $8K IU Southeast Next Big Thing Winner</span>
+      <span class="pill">🏅 Vogt Awards 2025 cohort</span>
+      <span class="pill">✈️ 110 flight schools in waiting pipeline</span>
+      <span class="pill">📱 UAS 2026 Aviation Scholarship program live</span>
+      <span class="pill">📊 Projecting $3.2M Year 1 revenue</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Raising</div>
+        <div class="il-amt"><span class="raise">Pre-Seed / Angel Round</span> — early stage</div>
+        <div class="il-use">Strong competition wins + verified school pipeline + drone industry tailwind. Ideal for aviation, logistics, or EdTech angels. Contact: properpilots.org &nbsp;·&nbsp; info@properpilots.org. Warm intros via Vogt Awards / Community Foundation of Louisville.</div>
+      </div>
+      <div class="ia">
+        <a href="https://properpilots.org" class="btn btn-o" target="_blank" rel="noopener">Website ↗</a>
+        <a href="https://www.bizjournals.com/louisville/inno/stories/news/2025/12/04/proper-pilots-tim-tweet-southern-indiana-2025.html" class="btn btn-o" target="_blank" rel="noopener">KY Inno Profile ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ════════ 12 APOLLO AUTOMATION ════════ -->
+<article class="card s-mat"
+  data-sector="iot hardware smart home sensors manufacturing" data-region="louisville" data-status="raising"
+  data-name="apollo automation smart home sensors IoT open source">
+  <div class="card-hdr">
+    <div class="tg">
+      <div class="c-num">12 · IoT Hardware / Manufacturing</div>
+      <h2 class="c-name">Apollo Automation</h2>
+      <p class="c-loc">📍 Versailles, KY (Greater Kentuckiana / Lexington) &nbsp;·&nbsp; Founded 2023 &nbsp;·&nbsp; Hardware Revenue</p>
+    </div>
+    <div class="bdgs">
+      <span class="bdg bdg-sec">IoT Sensors · Smart Home · Open Source Hardware</span>
+      <span class="bdg bdg-raise">🟢 2026 KY Inno Startup to Watch — Growth Stage</span>
+    </div>
+  </div>
+  <div class="cbody">
+    <p class="cdesc">Apollo Automation designs and manufactures privacy-first, open-source smart home sensors — including mmWave presence sensors, air quality monitors, and plant health monitors — that integrate natively with Home Assistant and Homey without cloud subscriptions. Born from a weekend frustration project by Kentucky friends, Apollo has rapidly scaled to a global customer base and became a key partner in Home Assistant's "Works With Home Assistant" certification program (featured in their 2025 State of the Open Home livestream). Named a 2026 KY Inno Startup to Watch, Apollo is one of the few Kentuckiana hardware companies with actual product revenue and international distribution.</p>
+    <div class="dg">
+      <div class="dl"><div class="dt">Founders</div><div class="dd">Team of Kentucky co-founders (not individually named publicly); local hardware and open-source community roots</div></div>
+      <div class="dl"><div class="dt">Product Phase</div><div class="dd"><strong>Commercial Revenue + Scaling</strong> — multiple product lines shipped; global customer base; expanding into commercial and industrial sensing</div></div>
+      <div class="dl"><div class="dt">Revenue</div><div class="dd hi-g">Revenue-generating — hardware product sales globally; expanding product lineup</div></div>
+      <div class="dl"><div class="dt">Prior Funding</div><div class="dd">Bootstrapped / early angel; no announced venture rounds publicly</div></div>
+      <div class="dl"><div class="dt">Awards / Recognition</div><div class="dd">2026 KY Inno Startup to Watch &nbsp;·&nbsp; "Works With Home Assistant" official partner &nbsp;·&nbsp; Featured: State of the Open Home 2025</div></div>
+      <div class="dl"><div class="dt">Market Strategy</div><div class="dd">Expand into commercial/industrial sensing market; grow "Works With Home Assistant" partnership; develop integrator channel; pursue Building/Broadband Communities Summit B2B market</div></div>
+    </div>
+    <hr class="hr">
+    <div class="sec-t">Traction Highlights</div>
+    <div class="pills">
+      <span class="pill">🏆 2026 KY Inno Startup to Watch</span>
+      <span class="pill">🏠 Works With Home Assistant — official partner</span>
+      <span class="pill">🌍 Global customer base — revenue-generating</span>
+      <span class="pill">📺 Featured: State of the Open Home 2025</span>
+      <span class="pill">🔓 Privacy-first open-source hardware</span>
+      <span class="pill">🏭 Locally manufactured in Kentucky</span>
+    </div>
+    <div class="ibar">
+      <div class="il">
+        <div class="il-lbl">Investment Opportunity</div>
+        <div class="il-amt"><span class="raise">Growth Capital</span> — revenue-positive, bootstrapped to date</div>
+        <div class="il-use">Rare Kentuckiana hardware company with real revenue, global sales, and an official Home Assistant partnership. Seeking growth capital to scale manufacturing and expand into commercial/industrial markets. Contact via apolloautomation.com or LinkedIn.</div>
+      </div>
+      <div class="ia">
+        <a href="https://apolloautomation.com" class="btn btn-o" target="_blank" rel="noopener">Website ↗</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+</div><!-- /grid -->
+</div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section id="ecosystem" class="eco">
+  <div class="wrap--w">
+    <div class="eco-h">
+      <p class="s-ey">Investment Landscape</p>
+      <h2 class="s-ti">Kentuckiana Angel Ecosystem</h2>
+      <p class="s-de">Active angel groups, seed funds, accelerators, and programs for Kentuckiana founders as of 2026. Kentucky's 40% Angel Investment Tax Credit makes angel checks uniquely attractive — a $100K investment effectively costs $60K in enhanced counties.</p>
+    </div>
+    <div class="igrid">
+      <div class="ic">
+        <div class="ic-n">Keyhorse Capital / KSTC</div>
+        <div class="ic-t">State-Backed Seed Fund &nbsp;·&nbsp; Louisville + NKY</div>
+        <div class="ic-d"><strong>Check:</strong> $10K–$500K &nbsp;·&nbsp; <strong>Stage:</strong> Pre-seed, Seed, Series A<br><strong>Focus:</strong> KY-based tech-enabled startups; health, logistics, B2B SaaS, cleantech<br><strong>Q1 2026 Cycle:</strong> Jan 1–Mar 31 (active)<br><strong>Apply:</strong> <a href="https://www.keyhorse.vc" target="_blank" rel="noopener">keyhorse.vc</a><br><strong>Note:</strong> SparkHaus NKY and Louisville offices</div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Bluegrass Angels</div>
+        <div class="ic-t">Angel Group &nbsp;·&nbsp; Lexington / Statewide</div>
+        <div class="ic-d"><strong>Check:</strong> $100K–$1.5M (group)<br><strong>Criteria:</strong> Proof of concept; valuation under $5M at first funding<br><strong>Sectors:</strong> Healthcare, biotech, high-tech, agritech<br><strong>Apply:</strong> <a href="https://bluegrassangels.com/funding/" target="_blank" rel="noopener">bluegrassangels.com</a> — via Dealum platform<br><strong>KY Tax Credit:</strong> Eligible investments qualify</div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Kentucky Angel Collective</div>
+        <div class="ic-t">New Network &nbsp;·&nbsp; Statewide (launched June 2025)</div>
+        <div class="ic-d">Partnership between U.S. Angel Collective and Render Capital. Resident at SparkHaus, Covington. Open to accredited and non-accredited investors.<br><strong>Focus:</strong> High-potential KY founders<br><strong>Offices:</strong> SparkHaus, 727 Madison Ave, Covington, NKY</div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Connetic Ventures / VCAFX</div>
+        <div class="ic-t">NKY VC / Public Access Fund &nbsp;·&nbsp; Covington, NKY</div>
+        <div class="ic-d">Brad Zapp's Covington-based VC — also launched VCAFX, a publicly accessible closed-end VC fund.<br><strong>Min investment:</strong> $2,500 (VCAFX) — opens VC to non-accredited investors<br><strong>Focus:</strong> Geographically agnostic tech<br><strong>SparkHaus:</strong> Corporate coworking member / founding sponsor<br><a href="https://www.connetic.ventures" target="_blank" rel="noopener">connetic.ventures</a></div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Fireroad Ventures</div>
+        <div class="ic-t">Pre-Seed VC &nbsp;·&nbsp; NKY / Cincinnati</div>
+        <div class="ic-d"><strong>Fund I:</strong> $5M (closed) — 506(c) public offering<br><strong>Focus:</strong> Applied AI + automation; SMB and service-sector tech<br><strong>Stage:</strong> Pre-seed, inception-stage<br><strong>SparkHaus:</strong> Office resident<br><strong>17 investments</strong> to date (as of Feb 2026)<br><a href="https://www.fireroad.io/ventures" target="_blank" rel="noopener">fireroad.io</a></div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Commonwealth Seed Capital</div>
+        <div class="ic-t">Seed VC &nbsp;·&nbsp; Kentucky Statewide</div>
+        <div class="ic-d">Kentucky-based fund investing in early-stage technology companies. $40M+ deployed since founding.<br><strong>Focus:</strong> Tech startups driving KY economic development<br><strong>SparkHaus:</strong> Office resident (Covington)<br>Strong track record in KY innovation ecosystem</div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">eGateway Capital</div>
+        <div class="ic-t">Growth-Stage VC &nbsp;·&nbsp; Kentucky's Largest VC</div>
+        <div class="ic-d">Kentucky's largest VC with $120M raised. Later-stage and early growth-stage investments.<br><strong>Focus:</strong> Tech companies with scaling potential; KY ties preferred<br><strong>SparkHaus:</strong> Office resident (Covington)<br>Strategic bridge from seed to Series B for regional startups</div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">KY Angel Investment Tax Credit</div>
+        <div class="ic-t">State Incentive &nbsp;·&nbsp; 2026 Applications Open</div>
+        <div class="ic-d"><strong>Credit:</strong> <strong>40%</strong> on investments in enhanced/high-unemployment counties; 25% statewide<br><strong>Effect:</strong> $100K investment → $60K effective cost<br><strong>Since 2021:</strong> $57M invested; 373 jobs created<br><strong>2026 apps open</strong> Dec 12, 2025+<br><a href="https://newkentuckyhome.ky.gov/entrepreneurship/kaitc" target="_blank" rel="noopener">kyinnovation.com</a></div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">Vogt Invention & Innovation Awards</div>
+        <div class="ic-t">Grant + Accelerator &nbsp;·&nbsp; Louisville</div>
+        <div class="ic-d">25-year Community Foundation of Louisville program. 6 companies/year.<br><strong>Award:</strong> $25K non-dilutive grant + 10-week accelerator + up to $25K additional from partner<br><strong>Focus:</strong> Louisville-region early-stage founders<br><strong>Alumni:</strong> Sofab Inks, RxLightning, Xena Intelligence, FreshFry, borderless<br><a href="https://cflouisville.org" target="_blank" rel="noopener">cflouisville.org</a></div>
+      </div>
+      <div class="ic">
+        <div class="ic-n">LifeSciKY / OneNKY Center</div>
+        <div class="ic-t">Wet Lab Incubator &nbsp;·&nbsp; Covington, NKY</div>
+        <div class="ic-d">NKY's new life science wet lab incubator at the OneNKY Center, Covington. Houses Simbryo Technologies, Clareo Biosciences, and other biotech startups.<br><strong>Access:</strong> Apply through BE NKY or Blue North<br><strong>Services:</strong> Lab space, equipment, regulatory mentorship, investor connections</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section id="notes" class="disc-s">
+  <div class="wrap--n">
+    <div class="disc">
+      <strong>Research Notes &amp; Disclaimer — March 27, 2026:</strong> This report was compiled from publicly available sources including Louisville Business First / KY Inno (2026 Startups to Watch, published March 5, 2026), KSTC Quarterly State of Startups reports, Kentucky Innovation Hubs Q2 FY25-26 Update (Jan 28, 2026), company websites, press releases, GlobeNewswire, NonWovens Industry, SBIR.gov, CB Insights, SignalBase, Boomerang Ventures, Perovskite-Info, PV Magazine, and LinkedIn company announcements. Funding amounts, round statuses, and company details reflect publicly available information as of March 27, 2026 and may have changed. Pitch decks listed as unavailable were not found in public sources — contact founders directly. This report does not constitute investment advice. Early-stage investing carries significant risk including total loss of capital. All investments should be independently verified. The KY Angel Investment Tax Credit (40%) requires separate certification through the Kentucky Cabinet for Economic Development — consult a qualified tax advisor. For the latest deal flow, attend Louisville AI Week, Vogt Awards Demo Day (annually Nov), KY Inno events at the Ice House Louisville, and SparkHaus events in Covington.
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="wrap--w">
+    <div class="ftr-in">
+      <p class="ftr-t">Generated <strong>March 27, 2026</strong> &nbsp;·&nbsp; Kentuckiana Angel Investment Report &nbsp;·&nbsp; Sources: KY Inno / Louisville Business First, KSTC, Boomerang Ventures, SBIR.gov, GlobeNewswire, company announcements</p>
+      <a href="#top" class="ftr-t" style="color:var(--muted);text-decoration:none">↑ Top</a>
+    </div>
+  </div>
+</footer>
+
+<button class="btt" id="btt" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+/* Theme toggle */
+(function(){
+  var t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  var d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  r.setAttribute('data-theme',d);
+  function ui(m){if(!t)return;t.innerHTML=m==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';t.setAttribute('aria-label','Switch to '+(m==='dark'?'light':'dark')+' mode')}
+  ui(d);
+  if(t)t.addEventListener('click',function(){d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);ui(d)});
+})();
+
+/* Filter + search */
+var fb=document.querySelectorAll('.fb-btn'),cards=document.querySelectorAll('.card'),si=document.getElementById('srch');
+var af='all',st='';
+function apply(){
+  cards.forEach(function(c){
+    var sec=c.dataset.sector||'',reg=c.dataset.region||'',sta=c.dataset.status||'',nm=c.dataset.name||'';
+    var mf=true;
+    if(af==='raising')mf=sta==='raising';
+    else if(af==='biotech')mf=sec.includes('bio');
+    else if(af==='healthtech')mf=sec.includes('health')||sec.includes('fem')||sec.includes('maternal')||sec.includes('senior');
+    else if(af==='edtech')mf=sec.includes('ed')||sec.includes('ai');
+    else if(af==='louisville')mf=reg==='louisville';
+    else if(af==='nky')mf=reg==='nky';
+    else if(af==='indiana')mf=reg==='indiana';
+    else if(af==='sbir')mf=sec.includes('sbir')||c.querySelector('.bdg-sbir')!==null;
+    var ms=st===''||nm.includes(st.toLowerCase())||sec.includes(st.toLowerCase());
+    c.classList.toggle('hidden',!(mf&&ms));
+  });
+}
+fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.classList.remove('active')});b.classList.add('active');af=b.dataset.filter;apply()})});
+si.addEventListener('input',function(e){st=e.target.value;apply()});
+
+/* Back to top */
+var btt=document.getElementById('btt');
+window.addEventListener('scroll',function(){btt.classList.toggle('vis',scrollY>500)},{passive:true});
+btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
