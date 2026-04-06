@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kentuckiana Angel Report — April 2026</title>
+<style>
+/* =============================================
+   THEME: DAWN CORAL — April 2026
+   Warm ivory bg, deep coral primary, gold accent
+   Distinctly different from March Midnight Teal
+   ============================================= */
+:root,[data-theme="light"]{
+  --bg:#fdf8f4;
+  --bg2:#f8f1eb;
+  --surf:#fff9f6;
+  --surf2:#f5ede5;
+  --brd:#e8d8cc;
+  --brd2:#dcccc0;
+  --txt:#2a1a0e;
+  --txt2:#5a3a28;
+  --muted:#9a7060;
+  --faint:#c4a898;
+  --pri:#bf4030;
+  --prih:#a03020;
+  --acc:#b88c18;
+  --acch:#9a7412;
+  --gold:#c9981a;
+  --grn:#2e7a3e;
+  --grnl:#e8f5ec;
+  --blue:#2c6ea0;
+  --bluel:#e6f0f8;
+  --purple:#7040b0;
+  --purplel:#f0e8f8;
+  --orange:#c85a18;
+  --sh-sm:0 1px 4px rgba(42,26,14,.09),0 0 1px rgba(42,26,14,.06);
+  --sh-md:0 4px 16px rgba(42,26,14,.12),0 1px 4px rgba(42,26,14,.08);
+  --sh-lg:0 8px 32px rgba(42,26,14,.16),0 2px 8px rgba(42,26,14,.10);
+  --text-xs:.78rem;
+  --text-sm:.875rem;
+  --text-md:1rem;
+  --text-lg:1.125rem;
+  --text-xl:1.3rem;
+  --text-2xl:1.75rem;
+  --text-3xl:2.4rem;
+  --r-sm:.35rem;
+  --r-md:.6rem;
+  --r-lg:1rem;
+  --r-xl:1.5rem;
+  --header-h:58px;
+  --trans:all .18s ease;
+}
+[data-theme="dark"]{
+  --bg:#180f0a;
+  --bg2:#1e140e;
+  --surf:#231710;
+  --surf2:#2a1e14;
+  --brd:#3a2a1e;
+  --brd2:#4a3828;
+  --txt:#f0e4d8;
+  --txt2:#c8b0a0;
+  --muted:#907870;
+  --faint:#5a4838;
+  --pri:#e05040;
+  --prih:#f06050;
+  --acc:#d4a82a;
+  --acch:#e8c040;
+  --gold:#d4a82a;
+  --grn:#4caf50;
+  --grnl:color-mix(in oklch,#4caf50 12%,var(--surf));
+  --blue:#5090d0;
+  --bluel:color-mix(in oklch,#5090d0 12%,var(--surf));
+  --purple:#9060d8;
+  --purplel:color-mix(in oklch,#9060d8 12%,var(--surf));
+  --orange:#e87030;
+  --sh-sm:0 1px 4px rgba(0,0,0,.35),0 0 1px rgba(0,0,0,.25);
+  --sh-md:0 4px 16px rgba(0,0,0,.45),0 1px 4px rgba(0,0,0,.3);
+  --sh-lg:0 8px 32px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.35);
+}
+
+/* Thesis alignment — always include */
+.bdg-thesis{background:color-mix(in oklch,#4caf50 14%,var(--surf));color:#2e7a3e;border:1px solid color-mix(in oklch,#4caf50 30%,transparent);font-weight:700}
+[data-theme="dark"] .bdg-thesis{color:#4caf50}
+.thesis-match{border-color:color-mix(in oklch,#4caf50 30%,transparent)!important;box-shadow:var(--sh-sm),0 0 0 1.5px color-mix(in oklch,#4caf50 22%,transparent)!important}
+.thesis-match:hover{box-shadow:var(--sh-md),0 0 0 2px color-mix(in oklch,#4caf50 35%,transparent)!important}
+.thesis-banner{display:flex;align-items:flex-start;gap:.75rem;padding:.9rem 1.1rem;border-radius:var(--r-md);background:color-mix(in oklch,#4caf50 8%,var(--surf));border:1px solid color-mix(in oklch,#4caf50 22%,transparent);margin-bottom:1.75rem;font-size:var(--text-xs);color:var(--txt2);line-height:1.5}
+.thesis-banner .tb-icon{font-size:1.4rem;flex-shrink:0;margin-top:.05rem}
+.thesis-banner strong{color:var(--grn)}
+
+*,::before,::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;min-height:100vh;transition:background .25s,color .25s}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.site-header{position:sticky;top:0;z-index:100;background:var(--surf);border-bottom:1.5px solid var(--brd);height:var(--header-h);display:flex;align-items:center;padding:0 clamp(1rem,4vw,2.5rem);box-shadow:var(--sh-sm);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hdr-logo{font-weight:800;font-size:var(--text-lg);color:var(--pri);letter-spacing:-.02em;text-decoration:none;flex-shrink:0}
+.hdr-logo span{color:var(--acc)}
+.hdr-nav{display:flex;gap:1.5rem;margin-left:2rem}
+.hdr-nav a{font-size:var(--text-sm);color:var(--muted);text-decoration:none;font-weight:500;transition:var(--trans);padding:.25rem 0;border-bottom:2px solid transparent}
+.hdr-nav a:hover{color:var(--pri);border-bottom-color:var(--pri)}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:.75rem}
+.theme-btn{background:var(--surf2);border:1px solid var(--brd);color:var(--txt2);padding:.3rem .65rem;border-radius:var(--r-sm);cursor:pointer;font-size:.85rem;transition:var(--trans)}
+.theme-btn:hover{background:var(--brd);color:var(--pri)}
+
+/* =============================================
+   HERO — diagonal stripe treatment
+   ============================================= */
+.hero{position:relative;overflow:hidden;padding:clamp(2.5rem,6vw,4.5rem) clamp(1rem,4vw,2.5rem);background:var(--bg2)}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(
+  135deg,
+  transparent,
+  transparent 28px,
+  color-mix(in oklch,var(--pri) 4%,transparent) 28px,
+  color-mix(in oklch,var(--pri) 4%,transparent) 30px
+);pointer-events:none}
+.hero::after{content:'';position:absolute;top:-60px;right:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,color-mix(in oklch,var(--pri) 10%,transparent),transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pri);background:color-mix(in oklch,var(--pri) 10%,var(--surf));border:1px solid color-mix(in oklch,var(--pri) 25%,transparent);padding:.3rem .8rem;border-radius:var(--r-xl);margin-bottom:1rem}
+.hero-eyebrow::before{content:'📍';font-size:.9rem}
+.hero h1{font-size:clamp(1.9rem,4vw,var(--text-3xl));font-weight:900;line-height:1.15;letter-spacing:-.03em;color:var(--txt);margin-bottom:.9rem;max-width:680px}
+.hero h1 em{color:var(--pri);font-style:normal}
+.hero-sub{font-size:var(--text-md);color:var(--txt2);max-width:600px;margin-bottom:2rem;line-height:1.65}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1rem}
+.stat-box{background:var(--surf);border:1.5px solid var(--brd);border-radius:var(--r-md);padding:.75rem 1.1rem;min-width:120px;flex:1 1 120px;max-width:180px;box-shadow:var(--sh-sm)}
+.stat-box .sv{font-size:1.6rem;font-weight:800;line-height:1;color:var(--pri);margin-bottom:.25rem}
+.stat-box .sl{font-size:.73rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.stat-box.gold .sv{color:var(--gold)}
+.stat-box.green .sv{color:var(--grn)}
+.stat-box.blue .sv{color:var(--blue)}
+
+/* =============================================
+   MAIN LAYOUT
+   ============================================= */
+.container{max-width:1200px;margin:0 auto;padding:2rem clamp(1rem,4vw,2.5rem)}
+
+/* =============================================
+   FILTER BAR — toggle-button style
+   ============================================= */
+.filter-section{margin-bottom:2rem}
+.filter-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem;display:block}
+.filter-row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.fb-btn{cursor:pointer;border:1.5px solid var(--brd2);background:var(--surf);color:var(--txt2);font-size:var(--text-xs);font-weight:600;padding:.3rem .75rem;border-radius:var(--r-xl);transition:var(--trans);white-space:nowrap}
+.fb-btn:hover{border-color:var(--pri);color:var(--pri);background:color-mix(in oklch,var(--pri) 6%,var(--surf))}
+.fb-btn.active{background:var(--pri);border-color:var(--pri);color:#fff}
+.search-input{margin-left:auto;padding:.3rem .85rem;border:1.5px solid var(--brd2);border-radius:var(--r-xl);background:var(--surf);color:var(--txt);font-size:var(--text-xs);width:200px;transition:var(--trans)}
+.search-input:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px color-mix(in oklch,var(--pri) 15%,transparent)}
+.search-input::placeholder{color:var(--faint)}
+
+/* =============================================
+   CARDS GRID — 2-col desktop
+   ============================================= */
+.cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+@media(max-width:860px){.cards-grid{grid-template-columns:1fr}}
+
+.card{background:var(--surf);border:1.5px solid var(--brd);border-radius:var(--r-lg);box-shadow:var(--sh-sm);transition:var(--trans);display:flex;flex-direction:column;overflow:hidden}
+.card:hover{transform:translateY(-2px);box-shadow:var(--sh-md)}
+.card.hidden{display:none}
+
+/* Card header */
+.card-hdr{padding:1rem 1.2rem .8rem;border-bottom:1px solid var(--brd)}
+.card-hdr-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;margin-bottom:.5rem}
+.card-num{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card-name{font-size:var(--text-xl);font-weight:800;color:var(--txt);line-height:1.2;letter-spacing:-.02em}
+.card-loc{font-size:var(--text-xs);color:var(--muted);margin-top:.15rem}
+.bdgs{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.6rem}
+.bdg{display:inline-flex;align-items:center;gap:.25rem;font-size:.7rem;font-weight:700;padding:.2rem .55rem;border-radius:var(--r-xl);letter-spacing:.02em}
+.bdg-sector{background:var(--bluel);color:var(--blue);border:1px solid color-mix(in oklch,var(--blue) 25%,transparent)}
+.bdg-raising{background:var(--grnl);color:var(--grn);border:1px solid color-mix(in oklch,var(--grn) 28%,transparent)}
+.bdg-funded{background:color-mix(in oklch,var(--acc) 12%,var(--surf));color:var(--acc);border:1px solid color-mix(in oklch,var(--acc) 28%,transparent)}
+.bdg-exit{background:var(--purplel);color:var(--purple);border:1px solid color-mix(in oklch,var(--purple) 28%,transparent)}
+.bdg-sbir{background:color-mix(in oklch,var(--orange) 10%,var(--surf));color:var(--orange);border:1px solid color-mix(in oklch,var(--orange) 25%,transparent)}
+.bdg-nky{background:var(--surf2);color:var(--txt2);border:1px solid var(--brd2)}
+.bdg-sindiana{background:var(--surf2);color:var(--txt2);border:1px solid var(--brd2)}
+
+/* Card body */
+.card-body{padding:.9rem 1.2rem;flex:1;display:flex;flex-direction:column;gap:.85rem}
+.card-desc{font-size:var(--text-sm);color:var(--txt2);line-height:1.65}
+
+/* Data grid */
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .75rem}
+.dg-item{}
+.dg-label{font-size:.67rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:.1rem}
+.dg-val{font-size:var(--text-xs);color:var(--txt2);font-weight:500;line-height:1.4}
+.dg-val strong{color:var(--txt);font-weight:700}
+
+/* Traction pills */
+.traction-row{display:flex;flex-wrap:wrap;gap:.35rem}
+.tr-pill{font-size:.69rem;font-weight:600;padding:.18rem .55rem;border-radius:var(--r-xl);background:var(--surf2);color:var(--muted);border:1px solid var(--brd)}
+.tr-pill.hi{background:color-mix(in oklch,var(--pri) 8%,var(--surf));color:var(--pri);border-color:color-mix(in oklch,var(--pri) 22%,transparent)}
+
+/* Investment bar */
+.inv-bar{border-top:1px solid var(--brd);padding:.8rem 1.2rem;background:var(--surf2)}
+.inv-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.inv-left{}
+.inv-round{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.inv-amount{font-size:var(--text-md);font-weight:800;color:var(--pri);line-height:1}
+.inv-use{font-size:.69rem;color:var(--muted);margin-top:.15rem;line-height:1.4;max-width:280px}
+.inv-actions{display:flex;gap:.4rem;flex-shrink:0}
+.act-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.69rem;font-weight:700;padding:.28rem .65rem;border-radius:var(--r-sm);cursor:pointer;transition:var(--trans);text-decoration:none;border:1.5px solid transparent}
+.act-btn.pri{background:var(--pri);color:#fff;border-color:var(--pri)}
+.act-btn.pri:hover{background:var(--prih)}
+.act-btn.sec{background:transparent;border-color:var(--brd2);color:var(--txt2)}
+.act-btn.sec:hover{border-color:var(--pri);color:var(--pri);background:color-mix(in oklch,var(--pri) 5%,var(--surf))}
+
+/* =============================================
+   SECTION TITLES
+   ============================================= */
+.section-hdr{margin-bottom:1.5rem}
+.section-hdr h2{font-size:var(--text-xl);font-weight:800;letter-spacing:-.02em;color:var(--txt);display:flex;align-items:center;gap:.5rem}
+.section-hdr h2::before{content:'';display:inline-block;width:4px;height:1.1em;background:var(--pri);border-radius:2px;flex-shrink:0}
+.section-hdr p{font-size:var(--text-sm);color:var(--muted);margin-top:.35rem}
+
+/* =============================================
+   ECOSYSTEM SECTION
+   ============================================= */
+.eco-section{margin-top:3rem}
+.eco-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.eco-card{background:var(--surf);border:1.5px solid var(--brd);border-radius:var(--r-md);padding:.85rem 1rem;box-shadow:var(--sh-sm);transition:var(--trans)}
+.eco-card:hover{border-color:var(--acc);box-shadow:var(--sh-md)}
+.eco-name{font-size:var(--text-sm);font-weight:700;color:var(--txt);margin-bottom:.2rem}
+.eco-role{font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--pri);margin-bottom:.3rem}
+.eco-desc{font-size:.72rem;color:var(--muted);line-height:1.45}
+
+/* =============================================
+   DISCLAIMER
+   ============================================= */
+.disclaimer{margin-top:2.5rem;background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-md);padding:1.1rem 1.3rem;font-size:.71rem;color:var(--muted);line-height:1.65}
+.disclaimer strong{color:var(--txt2)}
+.disclaimer ul{margin:.5rem 0 0 1.1rem}
+.disclaimer li{margin-bottom:.2rem}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer{margin-top:3rem;padding:1.25rem clamp(1rem,4vw,2.5rem);border-top:1.5px solid var(--brd);background:var(--surf);text-align:center;font-size:.73rem;color:var(--muted)}
+footer strong{color:var(--txt2)}
+
+/* =============================================
+   BACK TO TOP
+   ============================================= */
+#btt{position:fixed;bottom:1.5rem;right:1.5rem;width:40px;height:40px;border-radius:50%;background:var(--pri);color:#fff;border:none;cursor:pointer;font-size:1rem;box-shadow:var(--sh-md);display:none;align-items:center;justify-content:center;transition:var(--trans);z-index:50}
+#btt.show{display:flex}
+#btt:hover{background:var(--prih);transform:translateY(-2px)}
+
+/* Results count */
+.results-info{font-size:var(--text-xs);color:var(--muted);margin-bottom:.85rem;height:1.2em}
+
+/* Divider */
+.section-divider{height:1px;background:var(--brd);margin:2.5rem 0}
+
+@media(max-width:600px){
+  .hero-stats{gap:.65rem}
+  .stat-box{min-width:90px;padding:.55rem .8rem}
+  .stat-box .sv{font-size:1.25rem}
+  .hdr-nav{display:none}
+  .data-grid{grid-template-columns:1fr}
+  .search-input{width:140px}
+  .inv-row{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="#" class="hdr-logo">Kentuckiana<span>Startups</span></a>
+  <nav class="hdr-nav">
+    <a href="#startups">Startups</a>
+    <a href="#ecosystem">Ecosystem</a>
+    <a href="#notes">Notes</a>
+  </nav>
+  <div class="hdr-right">
+    <button class="theme-btn" id="themeBtn" title="Toggle dark/light mode">🌙 Dark</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Angel Investment Intelligence — April 6, 2026</div>
+    <h1>Active Raises —<br><em>Kentuckiana</em></h1>
+    <p class="hero-sub">Monthly deal-flow snapshot for Louisville, Northern Kentucky / Covington, and Southern Indiana. Curated for Angel Capital's thesis-driven investment strategy.</p>
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="sv">13</div>
+        <div class="sl">Companies Profiled</div>
+      </div>
+      <div class="stat-box green">
+        <div class="sv">5</div>
+        <div class="sl">Actively Raising</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv" style="font-size:1.2rem">9</div>
+        <div class="sl">🌱 Thesis Aligned</div>
+      </div>
+      <div class="stat-box gold">
+        <div class="sv">40%</div>
+        <div class="sl">KY Angel Tax Credit</div>
+      </div>
+      <div class="stat-box blue">
+        <div class="sv">$187M</div>
+        <div class="sl">YTD KY Early-Stage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="container" id="startups">
+
+  <!-- FILTER BAR -->
+  <div class="filter-section">
+    <span class="filter-label">Filter by</span>
+    <div class="filter-row">
+      <button class="fb-btn active" data-filter="all">All (13)</button>
+      <button class="fb-btn" data-filter="raising" style="border-color:color-mix(in oklch,#2e7a3e 30%,transparent);color:var(--grn)">🟢 Actively Raising</button>
+      <button class="fb-btn" data-filter="biotech">BioTech</button>
+      <button class="fb-btn" data-filter="healthtech">HealthTech</button>
+      <button class="fb-btn" data-filter="edtech">EdTech / AI</button>
+      <button class="fb-btn" data-filter="cleantech">CleanTech</button>
+      <button class="fb-btn" data-filter="fintech">FinTech</button>
+      <button class="fb-btn" data-filter="louisville">Louisville</button>
+      <button class="fb-btn" data-filter="nky">NKY</button>
+      <button class="fb-btn" data-filter="sindiana">S. Indiana</button>
+      <button class="fb-btn" data-filter="thesis" style="border-color:color-mix(in oklch,#4caf50 28%,transparent);color:#2e7a3e">🌱 Thesis Aligned</button>
+      <input class="search-input" id="searchInput" type="text" placeholder="🔍 Search companies…">
+    </div>
+  </div>
+
+  <!-- RESULTS COUNT -->
+  <div class="results-info" id="resultsInfo"></div>
+
+  <!-- THESIS BANNER -->
+  <div class="thesis-banner">
+    <span class="tb-icon">🌱</span>
+    <div><strong>Angel Capital Thesis Alignment:</strong> 9 of 13 companies this month match Jeremy's common-good investment criteria — spanning maternal health, clean energy, workforce equity, healthcare AI, community finance, and sustainable agriculture. Cards with a green border + 🌱 badge are thesis-aligned.</div>
+  </div>
+
+  <!-- CARDS GRID -->
+  <div class="cards-grid" id="cardsGrid">
+
+    <!-- ===== CARD 1: RAAPID ===== -->
+    <article class="card thesis-match"
+      data-sector="healthtech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">01 / HealthTech · AI</div>
+            <div class="card-name">RAAPID</div>
+            <div class="card-loc">📍 Louisville, KY · Founded 2022</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">HealthTech</span>
+          <span class="bdg bdg-funded">🔵 Series A Closed</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Healthcare AI</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">RAAPID's Neuro-Symbolic AI platform automates Medicare Advantage risk adjustment, medical coding, and RADV audit workflows. In March 2026, UPMC Enterprises and M12 (Microsoft's venture fund) backed an additional Series A extension — validating compliance-first clinical AI for health plans and ACOs.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Founder</div>
+            <div class="dg-val"><strong>Chetan Parikh</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Commercial</strong> · Revenue-generating</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Total Raised</div>
+            <div class="dg-val"><strong>$6.7M+ (Series A)</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Latest Round</div>
+            <div class="dg-val"><strong>Series A Ext.</strong> — UPMC + M12 (Mar 2026)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Medicare Advantage plans, ACOs, health systems</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Recognition</div>
+            <div class="dg-val">Modern Healthcare 2025 Best in Business IT</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">UPMC Enterprises</span>
+          <span class="tr-pill hi">M12 / Microsoft</span>
+          <span class="tr-pill">Medicare Advantage</span>
+          <span class="tr-pill">RADV Audits</span>
+          <span class="tr-pill">Neuro-Symbolic AI</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Series A Extension · Closed Mar 2026</div>
+            <div class="inv-amount">$6.7M+ raised</div>
+            <div class="inv-use">Expanding clinical AI platform, co-development with UPMC, retrospective + prospective workflows</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://www.raapidinc.com/" target="_blank">🌐 Website</a>
+            <a class="act-btn sec" href="https://www.finsmes.com/2026/03/raapid-raises-additional-series-a-investment-from-upmc-enterprises.html" target="_blank">📰 Press</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 2: NX PRENATAL ===== -->
+    <article class="card thesis-match"
+      data-sector="biotech"
+      data-location="louisville"
+      data-raising="true"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">02 / BioTech · Women's Health</div>
+            <div class="card-name">NX Prenatal</div>
+            <div class="card-loc">📍 Louisville, KY · Clinical Stage</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">BioTech</span>
+          <span class="bdg bdg-raising">🟢 Actively Raising</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Maternal Health</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">NX Prenatal is developing exosome-based liquid biopsy diagnostics for adverse pregnancy conditions — preterm birth, preeclampsia, and placenta accreta — diseases that disproportionately harm Black women. The company has partnered with Louisville's Health Equity Innovation Hub (funded by Humana) to advance prenatal health equity.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Founders</div>
+            <div class="dg-val"><strong>Medical / research team</strong> (Notre Dame lineage)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Clinical</strong> · First test near launch</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Total Raised</div>
+            <div class="dg-val"><strong>~$20M</strong> to date</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Active Round</div>
+            <div class="dg-val"><strong>Series A</strong> · $10M target, $6M closed</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">OB/GYN practices, maternal-fetal medicine specialists</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Investors</div>
+            <div class="dg-val">Solas BioVentures, Golden Seeds, Keyhorse Capital, Mindshift Capital</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">$4M Series A Gap</span>
+          <span class="tr-pill hi">Humana Partnership</span>
+          <span class="tr-pill">Liquid Biopsy</span>
+          <span class="tr-pill">Preterm Birth</span>
+          <span class="tr-pill">Health Equity</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Series A · ACTIVELY RAISING</div>
+            <div class="inv-amount">$4M remaining ($10M total target)</div>
+            <div class="inv-use">Launch first preterm birth test, advance preeclampsia &amp; placenta accreta diagnostics</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://www.nxprenatal.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 3: VIRTUAL PEAKER ===== -->
+    <article class="card thesis-match"
+      data-sector="cleantech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">03 / CleanTech · Energy</div>
+            <div class="card-name">Virtual Peaker</div>
+            <div class="card-loc">📍 Louisville, KY · Founded 2016</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">CleanTech</span>
+          <span class="bdg bdg-funded">🔵 Recently Funded</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Clean Energy</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Virtual Peaker's AI-powered DERMS (Distributed Energy Resource Management System) enables utilities to orchestrate residential solar, batteries, EVs, and smart thermostats into virtual power plants — reducing grid stress and carbon emissions. The company completed two funding rounds in 2025 (Greensoil PropTech + Veriten), cementing Louisville's position in energy transition tech.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Commercial</strong> · 70+ utility partners</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Total Raised</div>
+            <div class="dg-val"><strong>$31.2M</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Latest Round</div>
+            <div class="dg-val"><strong>Veriten-led</strong> round ($11.3M, Aug 2025)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">U.S. electric utilities, co-ops, community choice aggregators</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Team</div>
+            <div class="dg-val">70 employees</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Investors</div>
+            <div class="dg-val">Veriten, Greensoil PropTech, Moore Strategic, Emerson Ventures</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Virtual Power Plants</span>
+          <span class="tr-pill hi">DERMS</span>
+          <span class="tr-pill">AI Grid Dispatch</span>
+          <span class="tr-pill">DER Orchestration</span>
+          <span class="tr-pill">70 Employees</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Growth Stage · Series B range</div>
+            <div class="inv-amount">$31.2M total raised</div>
+            <div class="inv-use">Scaling utility partnerships, AI dispatch platform expansion</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://virtual-peaker.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 4: AFFIR MEDRX ===== -->
+    <article class="card thesis-match"
+      data-sector="healthtech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">04 / HealthTech · PBM</div>
+            <div class="card-name">AffirmedRx, PBC</div>
+            <div class="card-loc">📍 Louisville, KY · Founded 2022</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">HealthTech</span>
+          <span class="bdg bdg-sector" style="background:var(--purplel);color:var(--purple);border-color:color-mix(in oklch,var(--purple) 25%,transparent)">Public Benefit Corp</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Healthcare Access</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">The only Public Benefit Corporation leading next-generation pharmacy benefit management. AffirmedRx is built on radical transparency — passing 100% of rebates to plan sponsors and eliminating traditional PBM conflicts of interest that drive up drug costs for patients. Strong mission alignment with Jeremy's common-good thesis.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Commercial</strong> · Revenue-generating</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Team</div>
+            <div class="dg-val"><strong>90 employees</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Self-insured employers, health plans, unions</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Revenue Model</div>
+            <div class="dg-val">Admin fees only — no spread pricing</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Corp Structure</div>
+            <div class="dg-val">PBC — legally obligated to benefit stakeholders</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Sectors</div>
+            <div class="dg-val">HealthTech, Analytics, Pharmaceutical</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">100% Rebate Pass-Through</span>
+          <span class="tr-pill hi">No Spread Pricing</span>
+          <span class="tr-pill">Public Benefit Corp</span>
+          <span class="tr-pill">Drug Cost Transparency</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Commercial Stage</div>
+            <div class="inv-amount">Funding not publicly disclosed</div>
+            <div class="inv-use">Expanding employer and health plan client base nationally</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://affirmedrx.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 5: VALUE BUDDY ===== -->
+    <article class="card thesis-match"
+      data-sector="fintech"
+      data-location="louisville"
+      data-raising="true"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">05 / FinTech · SBA Lending</div>
+            <div class="card-name">Value Buddy</div>
+            <div class="card-loc">📍 Louisville, KY · Founded 2019</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">FinTech</span>
+          <span class="bdg bdg-raising">🟢 Actively Raising</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Financial Inclusion</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Value Buddy's AI platform delivers instant SBA business valuations and risk assessments in minutes for a fraction of legacy costs ($8K / 30 days → instant / affordable). By lowering the barrier to SBA lending, Value Buddy directly expands capital access for small business owners who can't afford traditional certified appraisals.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Revenue-generating</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Investors</div>
+            <div class="dg-val">Keyhorse Capital, Render Capital + others</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">SBA lenders, community banks, credit unions</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Recognition</div>
+            <div class="dg-val">2023 Render Capital Competition winner; Techstars Tulsa</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Key Product</div>
+            <div class="dg-val">Underwriting (AI)dvisor chatbot + valuation engine</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Round Status</div>
+            <div class="dg-val">Seed stage; seeking next round</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Keyhorse + Render</span>
+          <span class="tr-pill hi">Techstars Tulsa</span>
+          <span class="tr-pill">SBA Lending</span>
+          <span class="tr-pill">AI Valuation</span>
+          <span class="tr-pill">Small Biz Access</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Seed · Seeking Next Round</div>
+            <div class="inv-amount">Seed funded (amount undisclosed)</div>
+            <div class="inv-use">Scale SBA lender partnerships, expand AI underwriting product</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://hellovaluebuddy.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 6: EQL GAMES ===== -->
+    <article class="card"
+      data-sector="edtech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="false">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">06 / Entertainment Software</div>
+            <div class="card-name">EQL Games</div>
+            <div class="card-loc">📍 Louisville, KY · Founded 2010</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">Gaming · Lottery</span>
+          <span class="bdg bdg-funded">🔵 Keyhorse Feb 2026</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">EQL Games (formerly Equilottery Games) created the first daily lottery game based on live sporting events through U.S. lotteries — covering auto racing, baseball, basketball, football, golf, hockey, and horse racing. Keyhorse Capital made its most recent investment in EQL Games in February 2026.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Commercial</strong> · Live in multiple states</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Total Raised</div>
+            <div class="dg-val"><strong>$10M+</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Latest Investor</div>
+            <div class="dg-val"><strong>Keyhorse Capital</strong> (Feb 27, 2026)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Other Investors</div>
+            <div class="dg-val">Bullpen Capital, Parlay Capital, Endeavor Midwest</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">State lotteries, gaming commissions</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Team</div>
+            <div class="dg-val">22 employees</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Keyhorse Feb 2026</span>
+          <span class="tr-pill">Live Sports Lottery</span>
+          <span class="tr-pill">Bullpen Capital</span>
+          <span class="tr-pill">Multi-State</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Growth · Keyhorse-backed Feb 2026</div>
+            <div class="inv-amount">$10M+ raised</div>
+            <div class="inv-use">Expanding sports lottery products and state partnerships</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://www.eqlgames.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 7: EMPATH EQ ===== -->
+    <article class="card thesis-match"
+      data-sector="edtech healthtech"
+      data-location="nky"
+      data-raising="true"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">07 / EdTech · HealthTech · AI</div>
+            <div class="card-name">Empath EQ</div>
+            <div class="card-loc">📍 Covington, NKY · SparkHaus · Early Stage</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">EdTech</span>
+          <span class="bdg bdg-sector">HealthTech</span>
+          <span class="bdg bdg-raising">🟢 Actively Raising</span>
+          <span class="bdg bdg-nky">NKY</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Education + Healthcare</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Empath EQ built an AI-powered video simulation platform where nursing students and healthcare professionals practice soft skills — bedside manner, empathy, de-escalation — by interacting with AI-generated patients and family members in real-world scenarios. Addresses a critical gap in nursing education that classroom training can't replicate.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Founders</div>
+            <div class="dg-val"><strong>Jon Monahan, Alex Von Rosenberg, Lucas Consoli</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>MVP / Pilot</strong> · 13-member advisory council</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Funding</div>
+            <div class="dg-val">BRINK / Blue North (NKY program); seeking seed</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Traction</div>
+            <div class="dg-val">LOIs from nursing school deans &amp; sim center directors</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Location</div>
+            <div class="dg-val">SparkHaus, downtown Covington</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Nursing schools, hospital simulation centers</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">BRINK / Blue North</span>
+          <span class="tr-pill hi">Nursing LOIs</span>
+          <span class="tr-pill">AI Simulation</span>
+          <span class="tr-pill">SparkHaus</span>
+          <span class="tr-pill">Soft Skills Training</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Pre-Seed · Actively Raising</div>
+            <div class="inv-amount">Seeking seed capital</div>
+            <div class="inv-use">Build scenario 2, run paid pilots with nursing schools, hire engineering</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://empatheq.ai" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 8: BEYOND WILL ===== -->
+    <article class="card thesis-match"
+      data-sector="fintech"
+      data-location="nky"
+      data-raising="true"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">08 / LegalTech · Elder Care</div>
+            <div class="card-name">BeyondWill</div>
+            <div class="card-loc">📍 Covington, NKY · SparkHaus · KY Inno 2025</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">LegalTech</span>
+          <span class="bdg bdg-raising">🟢 Seeking Seed</span>
+          <span class="bdg bdg-nky">NKY</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Elder Care / Estate</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">BeyondWill is reimagining estate planning as a living, dynamic platform — not a static document. The product helps individuals and families create, manage, and keep estate plans updated over time, addressing a profound unmet need: 2 in 3 Americans die without a will, leaving families in crisis. Recognized as KY Inno Startup to Watch 2025.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>MVP / Early Commercial</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Funding</div>
+            <div class="dg-val">NKY Entrepreneurship Fund; seeking seed</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Direct-to-consumer, financial advisors, attorneys</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Location</div>
+            <div class="dg-val">SparkHaus, downtown Covington KY</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Recognition</div>
+            <div class="dg-val">KY Inno Startup to Watch 2025 (22 honorees)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Impact</div>
+            <div class="dg-val">~67% of Americans lack estate plans; grief + financial crisis at death</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">KY Inno Watch 2025</span>
+          <span class="tr-pill hi">SparkHaus</span>
+          <span class="tr-pill">Estate Planning</span>
+          <span class="tr-pill">NKY Ecosystem</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Pre-Seed / Seed · Actively Seeking</div>
+            <div class="inv-amount">NKY Entrepreneurship Fund backed</div>
+            <div class="inv-use">Product development, go-to-market for consumer + B2B channels</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://beyondwill.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 9: SUNFLOWER FUELS ===== -->
+    <article class="card thesis-match"
+      data-sector="cleantech"
+      data-location="nky"
+      data-raising="true"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">09 / CleanTech · AgTech</div>
+            <div class="card-name">Sunflower Fuels</div>
+            <div class="card-loc">📍 Northern Kentucky · KY Inno 2025</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">CleanTech</span>
+          <span class="bdg bdg-sector" style="background:color-mix(in oklch,var(--grn) 10%,var(--surf));color:var(--grn);border-color:color-mix(in oklch,var(--grn) 22%,transparent)">AgTech</span>
+          <span class="bdg bdg-raising">🟢 Seeking Seed</span>
+          <span class="bdg bdg-nky">NKY</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Clean Energy + Ag</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Sunflower Fuels is introducing Miscanthus x giganteus — a highly productive, low-input perennial bioenergy crop — to Kentucky, Indiana, Ohio, Illinois, and West Virginia. With markets in renewable food packaging, animal bedding, biodiesel, and sustainable aviation fuel (SAF), the company builds out the feedstock supply chain for the Midwest's bioenergy transition.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Early Commercial</strong> · First markets live</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Crops</div>
+            <div class="dg-val">Miscanthus x giganteus (no herbicide, perennial 20yr)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Markets</div>
+            <div class="dg-val">SAF, biodiesel, renewable packaging, animal bedding</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Region</div>
+            <div class="dg-val">KY, IN, OH, IL, WV — NKY/SparkHaus based</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Recognition</div>
+            <div class="dg-val">KY Inno Startup to Watch 2025; SparkHaus resident</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Macro Tailwinds</div>
+            <div class="dg-val">SAF mandate, USDA bioenergy programs, carbon markets</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Sustainable Aviation Fuel</span>
+          <span class="tr-pill hi">KY Inno Watch 2025</span>
+          <span class="tr-pill">Bioenergy Crops</span>
+          <span class="tr-pill">Carbon Sequestration</span>
+          <span class="tr-pill">SparkHaus</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Seed Stage · Actively Raising</div>
+            <div class="inv-amount">Seeking seed / USDA grant capital</div>
+            <div class="inv-use">Scale grower network, build regional processing partnerships, SAF pilot</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="#" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 10: BUILDER BACKED ===== -->
+    <article class="card"
+      data-sector="edtech"
+      data-location="nky"
+      data-raising="false"
+      data-thesis="false">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">10 / PropTech · HomeServices</div>
+            <div class="card-name">Builder Backed</div>
+            <div class="card-loc">📍 Northern Kentucky · SparkHaus · KY Inno 2025</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">PropTech</span>
+          <span class="bdg bdg-nky">NKY</span>
+          <span class="bdg" style="background:var(--surf2);color:var(--muted);border:1px solid var(--brd)">Early Stage</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Builder Backed simplifies homeownership by connecting homeowners with a curated, vetted network of service providers for maintenance, repairs, and home improvements through a single digital platform. Addresses the $600B+ fragmented home services market with a trust-based, technology-enabled approach.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>MVP / Pilot</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Funding</div>
+            <div class="dg-val">NKY Entrepreneurship Fund; early stage</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Homeowners, real estate agents, property managers</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Recognition</div>
+            <div class="dg-val">KY Inno Startup to Watch 2025; SparkHaus resident</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market Size</div>
+            <div class="dg-val">$600B+ U.S. home services</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Location</div>
+            <div class="dg-val">SparkHaus, downtown Covington KY</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">KY Inno Watch 2025</span>
+          <span class="tr-pill">Home Services</span>
+          <span class="tr-pill">SparkHaus</span>
+          <span class="tr-pill">Marketplace Model</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Early Stage</div>
+            <div class="inv-amount">NKY Entrepreneurship Fund backed</div>
+            <div class="inv-use">Build contractor network, launch in NKY/Cincinnati corridor</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="#" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 11: FIND CRA ===== -->
+    <article class="card thesis-match"
+      data-sector="fintech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">11 / FinTech · Community Finance</div>
+            <div class="card-name">findCRA</div>
+            <div class="card-loc">📍 Louisville, KY · Early Stage</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">FinTech</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Financial Inclusion</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">findCRA's SaaS platform connects banks with nonprofits to satisfy Community Reinvestment Act (CRA) requirements — helping banks invest in underserved communities more efficiently. By reducing friction in community-benefit lending, findCRA channels more capital toward low-income neighborhoods, affordable housing, and small business development.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Commercial</strong> · SaaS</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Team</div>
+            <div class="dg-val">5 employees</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">FDIC-regulated banks, credit unions, CDFIs</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Regulatory Driver</div>
+            <div class="dg-val">CRA modernization rules (2024) expand compliance requirements</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Impact</div>
+            <div class="dg-val">Directs bank capital to underserved LMI communities</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Sectors</div>
+            <div class="dg-val">FinTech, Community Development, SaaS</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">CRA Compliance SaaS</span>
+          <span class="tr-pill hi">LMI Community Impact</span>
+          <span class="tr-pill">Bank-Nonprofit Bridge</span>
+          <span class="tr-pill">Regulatory Tailwind</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Early Commercial / Seed Range</div>
+            <div class="inv-amount">Funding undisclosed</div>
+            <div class="inv-use">Scale bank customer acquisition, expand nonprofit network nationally</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="https://findcra.com/" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 12: ADVANCED CANCER THERAPEUTICS ===== -->
+    <article class="card thesis-match"
+      data-sector="biotech"
+      data-location="louisville"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">12 / BioTech · Oncology</div>
+            <div class="card-name">Advanced Cancer Therapeutics</div>
+            <div class="card-loc">📍 Louisville, KY · Clinical Stage</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">BioTech</span>
+          <span class="bdg bdg-sector" style="background:color-mix(in oklch,var(--orange) 10%,var(--surf));color:var(--orange);border-color:color-mix(in oklch,var(--orange) 22%,transparent)">Oncology</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Healthcare / Reducing Suffering</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Advanced Cancer Therapeutics is a Louisville-based biopharmaceutical company focused on the discovery and development of novel therapeutics for aggressive cancers with limited treatment options. A deep-science company targeting cancer types where standard of care fails patients most significantly.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Product Phase</div>
+            <div class="dg-val"><strong>Pre-Clinical / Research</strong></div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Team</div>
+            <div class="dg-val">56 employees</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Focus</div>
+            <div class="dg-val">Novel therapeutics for aggressive / hard-to-treat cancers</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Stage</div>
+            <div class="dg-val">Discovery + lead optimization; IND-enabling studies</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Market</div>
+            <div class="dg-val">Oncology therapeutic market ($300B+ globally)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Base</div>
+            <div class="dg-val">Louisville life sciences corridor</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Aggressive Cancers</span>
+          <span class="tr-pill hi">Novel Therapeutics</span>
+          <span class="tr-pill">56 Person Team</span>
+          <span class="tr-pill">Louisville BioTech</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">Pre-Clinical Stage</div>
+            <div class="inv-amount">Funding details not publicly disclosed</div>
+            <div class="inv-use">Drug discovery, IND-enabling preclinical studies</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn pri" href="#" target="_blank">🌐 Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== CARD 13: RXLIGHTNING (EXIT) ===== -->
+    <article class="card thesis-match"
+      data-sector="healthtech"
+      data-location="sindiana"
+      data-raising="false"
+      data-thesis="true">
+      <div class="card-hdr">
+        <div class="card-hdr-top">
+          <div>
+            <div class="card-num">13 / HealthTech · S. Indiana · EXIT</div>
+            <div class="card-name">RxLightning ✓ Acquired</div>
+            <div class="card-loc">📍 New Albany, IN · Founded 2020 · Acquired June 2025</div>
+          </div>
+        </div>
+        <div class="bdgs">
+          <span class="bdg bdg-sector">HealthTech</span>
+          <span class="bdg bdg-exit">🎉 Ecosystem Exit</span>
+          <span class="bdg bdg-sindiana">S. Indiana</span>
+          <span class="bdg bdg-thesis">🌱 Thesis: Healthcare Access</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">RxLightning, founded by Julia Regan in New Albany, Indiana, built software that dramatically speeds the enrollment process for patients starting specialty medications — removing one of the most frustrating friction points in healthcare. In June 2025, CoverMyMeds (McKesson) acquired the company for an undisclosed amount — a meaningful Kentuckiana exit. Julia Regan has since joined the Endeavor Southeast Board.</p>
+        <div class="data-grid">
+          <div class="dg-item">
+            <div class="dg-label">Founder</div>
+            <div class="dg-val"><strong>Julia Regan</strong> (now Endeavor Southeast Board)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Total Raised</div>
+            <div class="dg-val"><strong>$26.8M</strong> across 4 rounds</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Acquirer</div>
+            <div class="dg-val"><strong>CoverMyMeds</strong> (McKesson), June 2025</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Key Investors</div>
+            <div class="dg-val">LRVHealth, XLerateHealth, HealthX Ventures</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Series A Lead</div>
+            <div class="dg-val">LRVHealth — $17.5M (2023)</div>
+          </div>
+          <div class="dg-item">
+            <div class="dg-label">Impact</div>
+            <div class="dg-val">Expedited specialty drug access for thousands of patients</div>
+          </div>
+        </div>
+        <div class="traction-row">
+          <span class="tr-pill hi">Acquired by McKesson</span>
+          <span class="tr-pill hi">$26.8M Raised</span>
+          <span class="tr-pill">Specialty Rx</span>
+          <span class="tr-pill">S. Indiana Win</span>
+          <span class="tr-pill">Endeavor Southeast</span>
+        </div>
+      </div>
+      <div class="inv-bar">
+        <div class="inv-row">
+          <div class="inv-left">
+            <div class="inv-round">ACQUIRED — Ecosystem Exit Story</div>
+            <div class="inv-amount">$26.8M raised → CoverMyMeds exit</div>
+            <div class="inv-use">Validates Southern Indiana / Kentuckiana healthtech ecosystem</div>
+          </div>
+          <div class="inv-actions">
+            <a class="act-btn sec" href="https://www.wdrb.com/news/business/rxlightning-to-triple-workforce-with-17-5-million-infusion/" target="_blank">📰 Press</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div><!-- /cards-grid -->
+
+  <div class="section-divider"></div>
+
+  <!-- ECOSYSTEM SECTION -->
+  <section class="eco-section" id="ecosystem">
+    <div class="section-hdr">
+      <h2>Kentuckiana Investment Ecosystem</h2>
+      <p>Key funds, angels, accelerators, and support programs active in the Louisville / NKY / Southern Indiana corridor.</p>
+    </div>
+    <div class="eco-grid">
+      <div class="eco-card">
+        <div class="eco-name">Keyhorse Capital</div>
+        <div class="eco-role">Pre-Seed / Seed VC</div>
+        <div class="eco-desc">Louisville & Lexington. 100+ portfolio companies; $100K–$5M checks. KY's most active early-stage VC. Recent: EQL Games (Feb 2026), Swell Health. Requires KY presence.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Render Capital</div>
+        <div class="eco-role">Pre-Seed / Seed VC</div>
+        <div class="eco-desc">Louisville's dedicated early-stage fund. $100K–$500K checks. 61+ portfolio companies. Focus on Louisville and Southern Indiana. Recent: Value Buddy, Mandos.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Bluegrass Angels</div>
+        <div class="eco-role">Angel Network</div>
+        <div class="eco-desc">Lexington-based angel group investing across KY. Invests in early-stage companies; participated in NX Prenatal, Swell Health.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Kentuckiana Angel Network</div>
+        <div class="eco-role">Angel Network</div>
+        <div class="eco-desc">Louisville metro angel group. 40+ angels providing seed capital and mentorship to early-stage companies in the Kentuckiana region.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Connetic Ventures</div>
+        <div class="eco-role">Pre-Seed / Seed VC</div>
+        <div class="eco-desc">Kentucky-based; $50K–$250K checks. Founder-friendly approach; active in regional deal flow. Focuses on B2B software and tech-enabled services.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Access Ventures</div>
+        <div class="eco-role">Impact Investor</div>
+        <div class="eco-desc">Louisville-based impact-first investor. Strong alignment with Angel Capital thesis — invests in ventures creating measurable social and economic benefit.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Commonwealth Seed Capital</div>
+        <div class="eco-role">State Seed Fund</div>
+        <div class="eco-desc">Kentucky Enterprise Fund via KSTC. Pre-seed + seed investments in technology-based KY companies. Invested in NX Prenatal and others.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">eGateway Capital</div>
+        <div class="eco-role">Seed / Early VC</div>
+        <div class="eco-desc">Louisville-based VC fund investing in early-stage technology companies with focus on healthcare and enterprise software in the Midwest.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">KY Angel Investment Tax Credit</div>
+        <div class="eco-role">40% State Tax Credit</div>
+        <div class="eco-desc">Investors receive 40% state tax credit on qualifying KY startup investments. $100K investment → $40K credit. Among the strongest angel incentives in the U.S.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">Vogt Awards</div>
+        <div class="eco-role">Non-Dilutive Grant</div>
+        <div class="eco-desc">Community Foundation of Louisville. Non-dilutive capital for Louisville health tech and innovation startups. Key early-stage resource.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">LifeSciKY / OneNKY Center</div>
+        <div class="eco-role">Life Sciences Hub</div>
+        <div class="eco-desc">Regional life sciences cluster organization supporting biotech and health innovation across Kentucky, including the NKY/Cincinnati biomed corridor. $125M biomedical center in Covington underway.</div>
+      </div>
+      <div class="eco-card">
+        <div class="eco-name">SparkHaus (Blue North / NKY)</div>
+        <div class="eco-role">NKY Entrepreneurship Hub</div>
+        <div class="eco-desc">Historic Sims Building, downtown Covington. $16M project. Engine for NKY entrepreneurship — home to BeyondWill, Builder Backed, Sunflower Fuels, Empath EQ. BRINK program for early-stage NKY tech.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- NOTES / DISCLAIMER -->
+  <section id="notes">
+    <div class="disclaimer">
+      <strong>⚠️ Research Notes & Disclaimer — April 6, 2026</strong><br><br>
+      This report is generated for angel investor research purposes. Information is compiled from public sources and may be incomplete. Always verify directly with companies before making investment decisions. Not financial advice. Kentucky's 40% Angel Investment Tax Credit is subject to program limits and eligibility — consult a tax advisor.
+      <ul>
+        <li>Sources: KSTC Q2 FY26 Startup News; KY Inno Startups to Watch 2026; Keyhorse Capital website; Render Capital; Tracxn; FINSMES; VentureBeat; LINK NKY; NKy Tribune; Kenton County Gov; WDRB; Failory; Built In Louisville; Startup Louisville; NX Prenatal; Virtual Peaker; RAAPID; DataRovers; Keyhorse.vc</li>
+        <li>Funding figures sourced from Tracxn, Crunchbase, PitchBook, and press releases — verify current round status with companies directly.</li>
+        <li>"Actively Raising" status is based on available public information as of report generation date and may have changed.</li>
+        <li>Design Theme: Dawn Coral (April 2026). Prior theme: Midnight Teal (March 2026).</li>
+        <li>Report generated automatically on first Monday of month by Angel Capital / Jeremy Hudson's scheduled task.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <strong>KentuckianaStartups Angel Report</strong> — Generated April 6, 2026 · Design: Dawn Coral ·
+  Curated for <strong>Angel Capital</strong> — Louisville / NKY / Southern Indiana deal flow intelligence ·
+  <a href="https://jshuds01.github.io/angelcapitalky/2026/April/index.html" style="color:var(--pri)">Permalink</a>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="btt" title="Back to top">↑</button>
+
+<script>
+// =============================================
+// THEME TOGGLE
+// =============================================
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+let isDark = false;
+
+function applyTheme(dark) {
+  isDark = dark;
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeBtn.textContent = dark ? '☀️ Light' : '🌙 Dark';
+}
+
+themeBtn.addEventListener('click', () => applyTheme(!isDark));
+
+// =============================================
+// FILTERS
+// =============================================
+const cards = Array.from(document.querySelectorAll('.card'));
+const filterBtns = document.querySelectorAll('.fb-btn');
+const searchInput = document.getElementById('searchInput');
+const resultsInfo = document.getElementById('resultsInfo');
+
+let activeFilter = 'all';
+let searchTerm = '';
+
+function updateResults() {
+  let shown = 0;
+  cards.forEach(c => {
+    const sector = (c.dataset.sector || '').toLowerCase();
+    const loc = (c.dataset.location || '').toLowerCase();
+    const raising = c.dataset.raising === 'true';
+    const thesis = c.dataset.thesis === 'true';
+    const text = c.textContent.toLowerCase();
+    const af = activeFilter;
+
+    let mf = true;
+    if (af === 'all') mf = true;
+    else if (af === 'raising') mf = raising;
+    else if (af === 'biotech') mf = sector.includes('biotech');
+    else if (af === 'healthtech') mf = sector.includes('healthtech');
+    else if (af === 'edtech') mf = sector.includes('edtech');
+    else if (af === 'cleantech') mf = sector.includes('cleantech');
+    else if (af === 'fintech') mf = sector.includes('fintech');
+    else if (af === 'louisville') mf = loc === 'louisville';
+    else if (af === 'nky') mf = loc === 'nky';
+    else if (af === 'sindiana') mf = loc === 'sindiana';
+    else if (af === 'thesis') mf = c.dataset.thesis === 'true';
+
+    let ms = true;
+    if (searchTerm) ms = text.includes(searchTerm);
+
+    const visible = mf && ms;
+    c.classList.toggle('hidden', !visible);
+    if (visible) shown++;
+  });
+  resultsInfo.textContent = shown < cards.length
+    ? `Showing ${shown} of ${cards.length} companies`
+    : '';
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    updateResults();
+  });
+});
+
+searchInput.addEventListener('input', e => {
+  searchTerm = e.target.value.toLowerCase().trim();
+  updateResults();
+});
+
+// =============================================
+// BACK TO TOP
+// =============================================
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('show', window.scrollY > 400);
+});
+btt.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+</script>
+</body>
+</html>
