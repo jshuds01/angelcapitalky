@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kentuckiana Angel Investment Report — June 2026 | Angel Capital</title>
+<meta name="description" content="Angel Capital's June 2026 deal-flow intelligence report covering Louisville, Northern Kentucky, and Southern Indiana startup investment activity.">
+<style>
+/* ============================================================
+   COBALT BLUEPRINT THEME — June 2026
+   ============================================================ */
+:root,[data-theme="dark"]{
+  --bg:#080e1a;
+  --surf:#0e1a2e;
+  --surf2:#162238;
+  --txt:#e8f0fe;
+  --muted:#7a9cc8;
+  --pri:#2979ff;
+  --prih:#448aff;
+  --acc:#00b0ff;
+  --gold:#ffd740;
+  --grn:#00e676;
+  --red:#ff5252;
+  --brd:rgba(41,121,255,.18);
+  --sh-sm:0 1px 3px rgba(0,0,0,.5);
+  --sh-md:0 4px 12px rgba(0,0,0,.6);
+  --text-xs:.72rem;--text-sm:.82rem;--text-base:.9rem;--text-lg:1.05rem;--text-xl:1.25rem
+}
+[data-theme="light"]{
+  --bg:#f0f4ff;
+  --surf:#fff;
+  --surf2:#e8effd;
+  --txt:#0d1b3e;
+  --muted:#4a6494;
+  --pri:#1a56db;
+  --prih:#1347c0;
+  --acc:#0288d1;
+  --gold:#f9a825;
+  --grn:#2e7d32;
+  --red:#c62828;
+  --brd:rgba(26,86,219,.15);
+  --sh-sm:0 1px 3px rgba(0,0,0,.08);
+  --sh-md:0 4px 12px rgba(0,0,0,.12)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--txt);
+  font-size:var(--text-base);line-height:1.6;
+  transition:background .3s,color .3s
+}
+a{color:var(--acc);text-decoration:none}
+a:hover{color:var(--prih)}
+
+/* ---- STICKY HEADER ---- */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:var(--surf);
+  border-bottom:1px solid var(--brd);
+  box-shadow:var(--sh-md);
+  display:flex;align-items:center;
+  justify-content:space-between;
+  padding:.7rem 1.5rem;gap:1rem
+}
+.logo{
+  font-weight:800;font-size:1.1rem;
+  background:linear-gradient(135deg,var(--pri),var(--acc));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  white-space:nowrap
+}
+.header-nav{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.header-nav a{
+  font-size:var(--text-sm);font-weight:600;
+  padding:.35rem .75rem;border-radius:.4rem;
+  color:var(--muted);transition:all .2s
+}
+.header-nav a:hover,.header-nav a.active{
+  background:var(--surf2);color:var(--txt)
+}
+.theme-btn{
+  background:var(--surf2);border:1px solid var(--brd);
+  color:var(--txt);border-radius:.4rem;
+  padding:.35rem .65rem;cursor:pointer;
+  font-size:var(--text-sm);transition:all .2s
+}
+.theme-btn:hover{background:var(--pri);color:#fff;border-color:var(--pri)}
+
+/* ---- HERO ---- */
+.hero{
+  background:linear-gradient(160deg,#080e1a 0%,#0d1f3c 40%,#0a2050 70%,#0e1a2e 100%);
+  border-bottom:1px solid var(--brd);
+  padding:3.5rem 1.5rem 3rem;position:relative;overflow:hidden
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 40% at 70% 50%,rgba(41,121,255,.12) 0%,transparent 70%);
+  pointer-events:none
+}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative}
+.eyebrow{
+  font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--acc);margin-bottom:.75rem
+}
+.hero h1{
+  font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;
+  line-height:1.1;margin-bottom:1rem;
+  background:linear-gradient(135deg,#e8f0fe 0%,#448aff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.hero-desc{
+  font-size:var(--text-base);color:var(--muted);
+  max-width:640px;margin-bottom:2rem;line-height:1.7
+}
+.stats-bar{
+  display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem
+}
+.stat-chip{
+  background:var(--surf);border:1px solid var(--brd);
+  border-radius:.5rem;padding:.6rem 1.1rem;
+  display:flex;flex-direction:column;align-items:center;
+  box-shadow:var(--sh-sm)
+}
+.stat-num{
+  font-size:1.5rem;font-weight:900;
+  color:var(--acc);line-height:1
+}
+.stat-label{font-size:var(--text-xs);color:var(--muted);margin-top:.2rem}
+
+/* ---- SECTION LAYOUT ---- */
+.section{max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem}
+.section-title{
+  font-size:var(--text-xl);font-weight:800;
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:.6rem
+}
+.section-title::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,var(--brd),transparent)
+}
+
+/* ---- THESIS BANNER ---- */
+.thesis-banner{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:.9rem 1.1rem;border-radius:.5rem;
+  background:color-mix(in oklch,#4caf50 8%,var(--surf));
+  border:1px solid color-mix(in oklch,#4caf50 22%,transparent);
+  margin-bottom:1.5rem;font-size:var(--text-xs)
+}
+.thesis-banner-icon{font-size:1.4rem;flex-shrink:0;margin-top:.1rem}
+.thesis-banner p{color:var(--txt);line-height:1.6}
+.thesis-banner strong{color:var(--grn)}
+
+/* ---- FILTER BAR ---- */
+.filter-bar{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  margin-bottom:1.75rem;align-items:center
+}
+.filter-btn{
+  background:var(--surf);border:1px solid var(--brd);
+  color:var(--muted);border-radius:2rem;
+  padding:.38rem .85rem;cursor:pointer;
+  font-size:var(--text-xs);font-weight:600;
+  transition:all .2s;white-space:nowrap
+}
+.filter-btn:hover,.filter-btn.active{
+  background:var(--pri);color:#fff;border-color:var(--pri)
+}
+.search-wrap{margin-left:auto}
+.search-input{
+  background:var(--surf);border:1px solid var(--brd);
+  color:var(--txt);border-radius:2rem;
+  padding:.38rem 1rem;font-size:var(--text-xs);
+  width:220px;outline:none;transition:border .2s
+}
+.search-input:focus{border-color:var(--pri)}
+.search-input::placeholder{color:var(--muted)}
+
+/* ---- CARDS GRID ---- */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:1.25rem
+}
+.card{
+  background:var(--surf);border:1px solid var(--brd);
+  border-radius:.75rem;padding:1.25rem;
+  box-shadow:var(--sh-sm);
+  transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;gap:.6rem
+}
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--sh-md)
+}
+/* Thesis alignment */
+.bdg-thesis{
+  background:color-mix(in oklch,#4caf50 14%,var(--surf));
+  color:#4caf50;
+  border:1px solid color-mix(in oklch,#4caf50 30%,transparent);
+  font-weight:700
+}
+.thesis-match{
+  border-color:color-mix(in oklch,#4caf50 30%,transparent)!important;
+  box-shadow:var(--sh-sm),0 0 0 1.5px color-mix(in oklch,#4caf50 22%,transparent)!important
+}
+.thesis-match:hover{
+  box-shadow:var(--sh-md),0 0 0 2px color-mix(in oklch,#4caf50 35%,transparent)!important
+}
+
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.card-name{
+  font-size:var(--text-lg);font-weight:800;
+  color:var(--txt);line-height:1.2
+}
+.card-location{
+  font-size:var(--text-xs);color:var(--muted);margin-top:.15rem
+}
+.badges{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.25rem}
+.bdg{
+  display:inline-flex;align-items:center;gap:.25rem;
+  font-size:.68rem;font-weight:700;
+  padding:.22rem .55rem;border-radius:2rem;
+  letter-spacing:.02em
+}
+.bdg-sector{background:rgba(41,121,255,.15);color:var(--prih);border:1px solid rgba(41,121,255,.25)}
+.bdg-raising{background:rgba(0,230,118,.12);color:var(--grn);border:1px solid rgba(0,230,118,.25)}
+.bdg-sbir{background:rgba(255,215,64,.12);color:var(--gold);border:1px solid rgba(255,215,64,.25)}
+.bdg-exit{background:rgba(255,82,82,.12);color:var(--red);border:1px solid rgba(255,82,82,.25)}
+.card-desc{font-size:var(--text-sm);color:var(--muted);line-height:1.6}
+.card-detail{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:.4rem;margin-top:.25rem
+}
+.detail-item{font-size:var(--text-xs)}
+.detail-label{color:var(--muted);font-weight:600}
+.detail-val{color:var(--txt)}
+.card-footer{
+  margin-top:auto;padding-top:.6rem;
+  border-top:1px solid var(--brd);
+  display:flex;align-items:center;justify-content:space-between
+}
+.card-link{
+  font-size:var(--text-xs);font-weight:700;
+  color:var(--acc)
+}
+.card-link:hover{color:var(--prih)}
+.raise-status{
+  font-size:var(--text-xs);font-weight:700;
+  padding:.22rem .6rem;border-radius:2rem
+}
+.status-active{background:rgba(0,230,118,.12);color:var(--grn);border:1px solid rgba(0,230,118,.25)}
+.status-closed{background:rgba(41,121,255,.12);color:var(--prih);border:1px solid rgba(41,121,255,.2)}
+.status-acquired{background:rgba(255,82,82,.1);color:var(--red);border:1px solid rgba(255,82,82,.2)}
+.status-sbir{background:rgba(255,215,64,.12);color:var(--gold);border:1px solid rgba(255,215,64,.2)}
+
+/* hide cards */
+.card.hidden{display:none}
+
+/* ---- ECOSYSTEM SECTION ---- */
+.eco-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:1rem
+}
+.eco-card{
+  background:var(--surf);border:1px solid var(--brd);
+  border-radius:.65rem;padding:1rem 1.15rem;
+  box-shadow:var(--sh-sm)
+}
+.eco-name{font-weight:800;font-size:var(--text-base);color:var(--txt);margin-bottom:.3rem}
+.eco-desc{font-size:var(--text-xs);color:var(--muted);line-height:1.6}
+.eco-tag{
+  display:inline-block;margin-top:.5rem;
+  font-size:.65rem;font-weight:700;
+  padding:.18rem .5rem;border-radius:2rem;
+  background:rgba(41,121,255,.12);color:var(--prih);
+  border:1px solid rgba(41,121,255,.2)
+}
+
+/* ---- NOTES / DISCLAIMER ---- */
+.notes-box{
+  background:var(--surf);border:1px solid var(--brd);
+  border-radius:.65rem;padding:1.25rem 1.5rem;
+  font-size:var(--text-xs);color:var(--muted);line-height:1.8
+}
+.notes-box h3{color:var(--txt);font-size:var(--text-sm);margin-bottom:.6rem}
+.sources-list{margin-top:.5rem;padding-left:1rem}
+.sources-list li{margin-bottom:.2rem}
+.sources-list a{color:var(--acc)}
+
+/* ---- FOOTER ---- */
+.site-footer{
+  background:var(--surf);border-top:1px solid var(--brd);
+  text-align:center;padding:1.25rem;
+  font-size:var(--text-xs);color:var(--muted);margin-top:3rem
+}
+
+/* ---- BACK TO TOP ---- */
+#btt{
+  position:fixed;bottom:1.5rem;right:1.5rem;
+  background:var(--pri);color:#fff;border:none;
+  border-radius:50%;width:2.5rem;height:2.5rem;
+  cursor:pointer;font-size:1rem;
+  box-shadow:var(--sh-md);opacity:0;
+  transition:opacity .3s;display:flex;align-items:center;justify-content:center;z-index:99
+}
+#btt.show{opacity:1}
+#btt:hover{background:var(--prih)}
+
+/* ---- NO RESULTS ---- */
+.no-results{
+  grid-column:1/-1;text-align:center;
+  padding:2.5rem;color:var(--muted);font-size:var(--text-sm)
+}
+
+@media(max-width:600px){
+  .hero{padding:2rem 1rem}
+  .section{padding:1.5rem 1rem}
+  .stats-bar{gap:.5rem}
+  .stat-chip{padding:.5rem .75rem}
+  .site-header{padding:.6rem 1rem}
+  .search-wrap{margin-left:0;width:100%}
+  .search-input{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="logo">KentuckianaStartups</div>
+  <nav class="header-nav">
+    <a href="#startups" class="active">Startups</a>
+    <a href="#ecosystem">Ecosystem</a>
+    <a href="#notes">Notes</a>
+  </nav>
+  <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">&#9728;&#65039; Light</button>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Angel Investment Intelligence &#8212; June 2, 2026</p>
+    <h1>Active Raises &amp; Deal Flow<br>Kentuckiana Region</h1>
+    <p class="hero-desc">
+      Monthly intelligence on seed, angel, and early-stage venture activity across Louisville,
+      Northern Kentucky / Covington, and Southern Indiana &#8212; curated for investors who care
+      about the common good. Powered by Angel Capital.
+    </p>
+    <div class="stats-bar">
+      <div class="stat-chip">
+        <span class="stat-num">14</span>
+        <span class="stat-label">Companies Profiled</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-num">76</span>
+        <span class="stat-label">YTD KY Deals</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-num">40%</span>
+        <span class="stat-label">KY Angel Tax Credit</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Thesis-Aligned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STARTUPS SECTION
+     ============================================================ -->
+<div class="section" id="startups">
+
+  <!-- Thesis Banner -->
+  <div class="thesis-banner">
+    <span class="thesis-banner-icon">&#127807;</span>
+    <p>
+      Cards highlighted with a green border and the &#127807; badge match the
+      <strong>Angel Capital investment thesis</strong> &#8212; companies focused on the common good:
+      healthcare, education, clean energy, workforce equity, financial inclusion, or community
+      wellness. <strong>8 of 14</strong> companies this month are thesis-aligned.
+      Use the <strong>&#127807; Thesis Aligned</strong> filter to see them exclusively.
+    </p>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar" role="group" aria-label="Filter startups">
+    <button class="filter-btn active" data-filter="all">All (14)</button>
+    <button class="filter-btn" data-filter="raising">&#129002; Actively Raising</button>
+    <button class="filter-btn" data-filter="BioTech">BioTech</button>
+    <button class="filter-btn" data-filter="HealthTech">HealthTech</button>
+    <button class="filter-btn" data-filter="EdTech">EdTech / AI</button>
+    <button class="filter-btn" data-filter="Louisville">Louisville</button>
+    <button class="filter-btn" data-filter="NKY">NKY</button>
+    <button class="filter-btn" data-filter="Indiana">S. Indiana</button>
+    <button class="filter-btn" data-filter="SBIR/Grant">SBIR / Grant</button>
+    <button class="filter-btn" data-filter="thesis">&#127807; Thesis Aligned</button>
+    <div class="search-wrap">
+      <input type="search" class="search-input" id="searchInput" placeholder="Search companies&#8230;" aria-label="Search companies">
+    </div>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="cards-grid" id="cardsGrid">
+
+    <!-- 1. AffirmedRx -->
+    <article class="card thesis-match"
+             data-sector="HealthTech"
+             data-location="Louisville"
+             data-raising="false"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">AffirmedRx</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">HealthTech</span>
+        <span class="bdg bdg-sector">PBM</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Patient Outcomes</span>
+      </div>
+      <p class="card-desc">
+        The only Public Benefit Corporation in pharmacy benefit management. Runs on a flat
+        administrative fee so rebates flow directly to employer clients rather than the PBM,
+        covering 67,000+ retail pharmacies. 7-Eleven is among its newest enterprise clients
+        as the market shifts toward transparent PBM models in 2026.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Growth / Series-stage</div></div>
+        <div class="detail-item"><div class="detail-label">Round</div><div class="detail-val">Undisclosed 2026</div></div>
+        <div class="detail-item"><div class="detail-label">Traction</div><div class="detail-val">Enterprise clients scaling</div></div>
+        <div class="detail-item"><div class="detail-label">Founded</div><div class="detail-val">2022</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://affirmedrx.com" target="_blank" rel="noopener">affirmedrx.com &#8599;</a>
+        <span class="raise-status status-closed">Institutional Growth</span>
+      </div>
+    </article>
+
+    <!-- 2. Wicked Technologies -->
+    <article class="card thesis-match"
+             data-sector="HealthTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Wicked Technologies</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">HealthTech</span>
+        <span class="bdg bdg-sector">Elder Care</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-sbir">SBIR / NIH</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Elder Care / Patient Outcomes</span>
+      </div>
+      <p class="card-desc">
+        Developer of the Wicked Smart Pad&#8482; &#8212; a washable, reusable, sensorized incontinence
+        bed pad that detects moisture and alerts caregivers in real time. Recognized as a
+        Product of Excellence by the National Institute for Dementia Education. Received $2.1M
+        Series A2 from Boomerang Ventures plus a $500K NIA grant in 2026.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Series A2</div></div>
+        <div class="detail-item"><div class="detail-label">Raised</div><div class="detail-val">$2.1M (Boomerang Ventures)</div></div>
+        <div class="detail-item"><div class="detail-label">NIA Grant</div><div class="detail-val">$500K (2026)</div></div>
+        <div class="detail-item"><div class="detail-label">Focus</div><div class="detail-val">Senior living pilot expansion</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://wickedsmartpad.com" target="_blank" rel="noopener">wickedsmartpad.com &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 3. DesiCorp -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">DesiCorp</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sector">MedTech</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Medicine</span>
+      </div>
+      <p class="card-desc">
+        Developing freeze-dried red blood cells storable at room temperature for patients
+        experiencing traumatic blood loss &#8212; critical in remote and battlefield settings.
+        Backed by Keyhorse Capital. Raised $840K in March 2026 (total $6.03M across 3 rounds).
+        Now collaborating with Safi Biotherapeutics on freeze-drying mRBCs.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Series A</div></div>
+        <div class="detail-item"><div class="detail-label">Total Raised</div><div class="detail-val">$6.03M (3 rounds)</div></div>
+        <div class="detail-item"><div class="detail-label">2026 Raise</div><div class="detail-val">$840K (March 2026)</div></div>
+        <div class="detail-item"><div class="detail-label">Investors</div><div class="detail-val">Keyhorse Capital + others</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://mtec-sc.org/members/desicorp-inc" target="_blank" rel="noopener">DesiCorp &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 4. CreoSalus -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="Louisville"
+             data-raising="false"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">CreoSalus</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sector">Pharma</span>
+        <span class="bdg bdg-sbir">SBIR 2026</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Oncology</span>
+      </div>
+      <p class="card-desc">
+        Full-service pharmaceutical development company building an innovative convection-
+        enhanced delivery catheter to improve therapeutic coverage of glioblastoma (GBM) brain
+        tumors &#8212; a critical unmet oncology need. Received KY SBIR/STTR matching grant as
+        part of the February 2026 $862K state award round.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">SBIR Phase</div></div>
+        <div class="detail-item"><div class="detail-label">2026 Award</div><div class="detail-val">KY SBIR Match (Feb 2026)</div></div>
+        <div class="detail-item"><div class="detail-label">Federal Pool</div><div class="detail-val">Part of $6.6M federal round</div></div>
+        <div class="detail-item"><div class="detail-label">Focus</div><div class="detail-val">GBM oncology delivery</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://creosalus.com" target="_blank" rel="noopener">creosalus.com &#8599;</a>
+        <span class="raise-status status-sbir">SBIR / Grant</span>
+      </div>
+    </article>
+
+    <!-- 5. EndoNavis -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">EndoNavis</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">MedTech</span>
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sbir">SBIR 2026</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Patient Outcomes</span>
+      </div>
+      <p class="card-desc">
+        Applying single-use, low-profile endoscopes for novel GI clinical applications &#8212;
+        pioneering a new approach to treating variceal hemorrhaging in cirrhosis patients,
+        a major unmet clinical need. Awarded KY SBIR/STTR matching funds in the February 2026
+        $862K state grant round; seeking angel co-investment.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Early / SBIR Phase</div></div>
+        <div class="detail-item"><div class="detail-label">2026 Award</div><div class="detail-val">KY SBIR Matching Grant</div></div>
+        <div class="detail-item"><div class="detail-label">Traction</div><div class="detail-val">Novel GI therapy approach</div></div>
+        <div class="detail-item"><div class="detail-label">Seeking</div><div class="detail-val">Angel + SBIR co-investment</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://kyinnovation.com/sbir/" target="_blank" rel="noopener">KY Innovation &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 6. Clareo Biosciences -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Clareo Biosciences</div>
+          <div class="card-location">&#128205; Louisville / Covington (OneNKY Center), KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sector">Immunogenetics</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Diagnostics</span>
+      </div>
+      <p class="card-desc">
+        Harnessing immunogenetics to improve human health &#8212; serving labs and clinics
+        worldwide via DNA sequencing to understand disease pathologies, improve diagnoses, and
+        design more effective vaccines. One of three biotechs anchored at the LifeSciKY wet
+        lab in Covington&#8217;s OneNKY Center. KY Inno 2026 Startup to Watch.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed / Seed</div></div>
+        <div class="detail-item"><div class="detail-label">Backing</div><div class="detail-val">NIH KYNETIC, NSF I-Corps</div></div>
+        <div class="detail-item"><div class="detail-label">Lab</div><div class="detail-val">OneNKY Center, Covington</div></div>
+        <div class="detail-item"><div class="detail-label">Origin</div><div class="detail-val">UofL School of Medicine spinout</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://clareobio.com" target="_blank" rel="noopener">clareobio.com &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 7. Simbryo Technologies -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="NKY"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Simbryo Technologies</div>
+          <div class="card-location">&#128205; Covington (OneNKY Center), NKY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sector">Women&#8217;s Health</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Women&#8217;s Health / Reproductive Health</span>
+      </div>
+      <p class="card-desc">
+        Develops endometrial organoids and personalized assays to improve IVF success rates.
+        Launched Simbryo FX in October 2025 &#8212; a functional assay predicting embryo
+        implantation likelihood before transfer. Anchored at LifeSciKY&#8217;s 15,000 sq ft wet
+        lab in the OneNKY Center. Partnered with Cincinnati Children&#8217;s Hospital.
+        KY Inno 2026 Startup to Watch.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Seed / Pre-Series A</div></div>
+        <div class="detail-item"><div class="detail-label">Product</div><div class="detail-val">Simbryo FX (Oct 2025)</div></div>
+        <div class="detail-item"><div class="detail-label">Partner</div><div class="detail-val">Cincinnati Children&#8217;s Hospital</div></div>
+        <div class="detail-item"><div class="detail-label">Lab</div><div class="detail-val">OneNKY Center wet lab</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://www.simbryotech.com" target="_blank" rel="noopener">simbryotech.com &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 8. Another Nine -->
+    <article class="card"
+             data-sector="ConsumerTech"
+             data-location="NKY"
+             data-raising="false"
+             data-thesis="false">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Another Nine</div>
+          <div class="card-location">&#128205; Covington, NKY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">ConsumerTech</span>
+        <span class="bdg bdg-sector">Franchise Tech</span>
+      </div>
+      <p class="card-desc">
+        24/7 indoor golf simulator franchise with proprietary A9OS software powering all-private
+        simulator suites and Trackman gameplay. Signed 65+ franchise territories across 16 states.
+        Achieved operational profitability in Q1 2026. Keyhorse Capital&#8217;s most recent deal,
+        invested May 7, 2026. $2M round backed entirely by existing investors.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Series A-equivalent</div></div>
+        <div class="detail-item"><div class="detail-label">Raised</div><div class="detail-val">$2M (existing investors)</div></div>
+        <div class="detail-item"><div class="detail-label">Traction</div><div class="detail-val">65+ franchise territories</div></div>
+        <div class="detail-item"><div class="detail-label">Investor</div><div class="detail-val">Keyhorse Capital (May 2026)</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://anothernine.com" target="_blank" rel="noopener">anothernine.com &#8599;</a>
+        <span class="raise-status status-closed">Round Closed</span>
+      </div>
+    </article>
+
+    <!-- 9. Due Gooder -->
+    <article class="card thesis-match"
+             data-sector="EdTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Due Gooder</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">EdTech / AI</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Education / Access to Learning</span>
+      </div>
+      <p class="card-desc">
+        AI-powered academic planning tool that pulls assignment deadlines directly from course
+        syllabi, organizes them into a digital planner, and sends reminders via text and email.
+        Scaled from 10,000 to 36,000+ users organically. Named KY Inno 2026 Startup to Watch.
+        Raised $25K seed; building toward institutional round.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed</div></div>
+        <div class="detail-item"><div class="detail-label">Raised</div><div class="detail-val">$25K</div></div>
+        <div class="detail-item"><div class="detail-label">Users</div><div class="detail-val">36,000+ active</div></div>
+        <div class="detail-item"><div class="detail-label">Team</div><div class="detail-val">7 employees</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://pitchbook.com/profiles/company/938614-87" target="_blank" rel="noopener">Due Gooder &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 10. MercenaryMarketing.ai -->
+    <article class="card"
+             data-sector="EdTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="false">
+      <div class="card-header">
+        <div>
+          <div class="card-name">MercenaryMarketing.ai</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">AI / MarTech</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+      </div>
+      <p class="card-desc">
+        AI-driven marketing platform built for solopreneurs and small businesses. Offers
+        content creation, paid digital media, and AI assistant / chatbot services. Launched
+        January 2026 out of Louisville. Named KY Inno 2026 Startup to Watch. Competes with
+        large agencies through lean, AI-powered systems designed for SMB owners.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed / Launch</div></div>
+        <div class="detail-item"><div class="detail-label">Founded</div><div class="detail-val">January 2026</div></div>
+        <div class="detail-item"><div class="detail-label">Focus</div><div class="detail-val">SMB AI marketing</div></div>
+        <div class="detail-item"><div class="detail-label">Model</div><div class="detail-val">SaaS + services hybrid</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://www.mercenarymarketing.ai" target="_blank" rel="noopener">mercenarymarketing.ai &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 11. Proper Pilots -->
+    <article class="card"
+             data-sector="Aerospace"
+             data-location="Indiana"
+             data-raising="true"
+             data-thesis="false">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Proper Pilots</div>
+          <div class="card-location">&#128205; Georgetown, Indiana (S. Indiana)</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">Aerospace / UAV</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+      </div>
+      <p class="card-desc">
+        Southern Indiana-based UAV / drone services startup that won $8,000 at IU Southeast&#8217;s
+        &#8220;The Next Big Thing 2025&#8221; pitch competition &#8212; one of the region&#8217;s highest-profile
+        early-stage pitch wins of the quarter. Named KY Inno 2026 Startup to Watch. Building
+        toward a pre-seed angel round.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed</div></div>
+        <div class="detail-item"><div class="detail-label">Award</div><div class="detail-val">$8K pitch win (IU Southeast)</div></div>
+        <div class="detail-item"><div class="detail-label">Focus</div><div class="detail-val">UAV / drone operations</div></div>
+        <div class="detail-item"><div class="detail-label">Region</div><div class="detail-val">S. Indiana / Louisville corridor</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://news.iu.edu/southeast/live/news/48045-iu-southeast-hosts-the-next-big-thing-pitch" target="_blank" rel="noopener">Pitch Result &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 12. PGXL Technologies -->
+    <article class="card thesis-match"
+             data-sector="BioTech"
+             data-location="Louisville"
+             data-raising="false"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">PGXL Technologies</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">BioTech</span>
+        <span class="bdg bdg-sector">Diagnostics</span>
+        <span class="bdg bdg-sbir">SBIR 2026</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Healthcare / Child Health</span>
+      </div>
+      <p class="card-desc">
+        Developing a rapid, simple-to-use, cost-effective urine collection kit to detect
+        obstructive sleep apnea in children &#8212; eliminating expensive overnight clinical sleep
+        studies. A UofL Research Foundation collaboration. Awarded KY SBIR/STTR matching
+        funds in February 2026 as part of the state&#8217;s $862K grant round.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">SBIR Phase</div></div>
+        <div class="detail-item"><div class="detail-label">Partner</div><div class="detail-val">UofL Research Foundation</div></div>
+        <div class="detail-item"><div class="detail-label">Award</div><div class="detail-val">KY SBIR Match (Feb 2026)</div></div>
+        <div class="detail-item"><div class="detail-label">Market</div><div class="detail-val">Pediatric diagnostics</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://kyinnovation.com/sbir/" target="_blank" rel="noopener">KY Innovation &#8599;</a>
+        <span class="raise-status status-sbir">SBIR / Grant</span>
+      </div>
+    </article>
+
+    <!-- 13. FourCorners -->
+    <article class="card thesis-match"
+             data-sector="FinTech"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="true">
+      <div class="card-header">
+        <div>
+          <div class="card-name">FourCorners</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">FinTech</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+        <span class="bdg bdg-thesis">&#127807; Thesis: Financial Inclusion</span>
+      </div>
+      <p class="card-desc">
+        Louisville-based fintech startup building tools focused on financial access and equity
+        for underserved communities. Named a KY Inno 2026 Startup to Watch. Actively raising
+        pre-seed and seed capital. Part of the growing Louisville fintech and social impact
+        startup cluster.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed / Seed</div></div>
+        <div class="detail-item"><div class="detail-label">Recognition</div><div class="detail-val">KY Inno 2026 Startup to Watch</div></div>
+        <div class="detail-item"><div class="detail-label">Sector</div><div class="detail-val">FinTech / Social Impact</div></div>
+        <div class="detail-item"><div class="detail-label">Location</div><div class="detail-val">Louisville, KY</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://www.startuplouisville.com" target="_blank" rel="noopener">Startup Louisville &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+    <!-- 14. Essential Innovations -->
+    <article class="card"
+             data-sector="Manufacturing"
+             data-location="Louisville"
+             data-raising="true"
+             data-thesis="false">
+      <div class="card-header">
+        <div>
+          <div class="card-name">Essential Innovations</div>
+          <div class="card-location">&#128205; Louisville, KY</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="bdg bdg-sector">Advanced Manufacturing</span>
+        <span class="bdg bdg-raising">&#129002; Active Raise</span>
+      </div>
+      <p class="card-desc">
+        R&amp;D company manufacturing and supplying unique products to commercial and industrial
+        sectors &#8212; creating innovative solutions that address specific needs across industries.
+        Named KY Inno 2026 Startup to Watch. Building toward a first institutional raise out
+        of the Louisville advanced manufacturing and innovation corridor.
+      </p>
+      <div class="card-detail">
+        <div class="detail-item"><div class="detail-label">Stage</div><div class="detail-val">Pre-Seed / Seed</div></div>
+        <div class="detail-item"><div class="detail-label">Recognition</div><div class="detail-val">KY Inno 2026 Startup to Watch</div></div>
+        <div class="detail-item"><div class="detail-label">Sector</div><div class="detail-val">Industrial R&amp;D</div></div>
+        <div class="detail-item"><div class="detail-label">Location</div><div class="detail-val">Louisville, KY</div></div>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" href="https://www.essentialinno.com" target="_blank" rel="noopener">essentialinno.com &#8599;</a>
+        <span class="raise-status status-active">&#129002; Actively Raising</span>
+      </div>
+    </article>
+
+  </div><!-- /cards-grid -->
+
+  <p id="noResults" class="no-results" style="display:none">No companies match that filter or search.</p>
+
+</div><!-- /section#startups -->
+
+<!-- ============================================================
+     ECOSYSTEM SECTION
+     ============================================================ -->
+<div class="section" id="ecosystem">
+  <h2 class="section-title">&#127963;&#65039; Kentuckiana Ecosystem</h2>
+  <div class="eco-grid">
+
+    <div class="eco-card">
+      <div class="eco-name">Keyhorse Capital</div>
+      <p class="eco-desc">KSTC-managed fund. 313+ companies financed, 190 active portfolio companies, 800+ jobs created. Invests quarterly in KY-based tech companies. Latest deals: Another Nine (May 2026) and Illume (March 2026).</p>
+      <a href="https://www.keyhorse.vc" target="_blank" rel="noopener"><span class="eco-tag">keyhorse.vc &#8599;</span></a>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Bluegrass Angels</div>
+      <p class="eco-desc">Kentucky&#8217;s premier angel investor group focused on early-stage technology companies. Works in concert with the KY Angel Investment Tax Credit to maximize investor returns.</p>
+      <a href="https://www.kyinnovation.com/investors/" target="_blank" rel="noopener"><span class="eco-tag">kyinnovation.com &#8599;</span></a>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Kentucky Angel Collective</div>
+      <p class="eco-desc">Formal network of 40+ angel investors organized to encourage development of start-up companies and support new businesses across the Louisville area and broader Kentuckiana region.</p>
+      <span class="eco-tag">Louisville-based</span>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Connetic Ventures</div>
+      <p class="eco-desc">Early-stage venture firm focused on Midwest founders. Active in the Louisville and Kentuckiana corridor with pre-seed and seed investments in technology-enabled companies.</p>
+      <span class="eco-tag">Midwest VC</span>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Fireroad Ventures</div>
+      <p class="eco-desc">Louisville-area early-stage VC with focus on scalable software, SaaS, and technology-enabled services. Part of the expanding institutional capital base supporting Kentuckiana founders.</p>
+      <span class="eco-tag">Louisville VC</span>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Render Capital</div>
+      <p class="eco-desc">Louisville&#8217;s most prominent early-stage fund. 61-company portfolio covering KY, Southern Indiana, and the broader Midwest. Pre-seed and seed focus. $20B+ syndicate network for follow-on capital.</p>
+      <a href="https://www.render.capital" target="_blank" rel="noopener"><span class="eco-tag">render.capital &#8599;</span></a>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Commonwealth Seed Capital</div>
+      <p class="eco-desc">State-supported seed fund providing early-stage capital to Kentucky-based companies commercializing technology-based products. Stimulates private co-investment alongside state funding.</p>
+      <span class="eco-tag">State-backed seed</span>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">eGateway Capital</div>
+      <p class="eco-desc">Indiana-focused early-stage investment network supporting Southern Indiana and the Louisville metro corridor. Bridges Indiana and Kentucky startup capital for cross-border opportunities.</p>
+      <span class="eco-tag">S. Indiana / Louisville</span>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">KY Angel Investment Tax Credit</div>
+      <p class="eco-desc">Up to <strong>40% tax credit</strong> on qualified investments in certified Kentucky startups. A $100K investment effectively costs $60K &#8212; one of the most generous angel incentives in the US. Both investor and company must apply for certification.</p>
+      <a href="https://newkentuckyhome.ky.gov/entrepreneurship/Investor_Information" target="_blank" rel="noopener"><span class="eco-tag">Apply Now &#8599;</span></a>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">Vogt Awards</div>
+      <p class="eco-desc">Administered by the Community Foundation of Louisville since 2000. The 25th Anniversary Demo Day took place November 2025, celebrating founders across the region with grants and technical assistance.</p>
+      <a href="https://www.cflouisville.org/community-support/vogt-awards/" target="_blank" rel="noopener"><span class="eco-tag">cflouisville.org &#8599;</span></a>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-name">LifeSciKY / OneNKY Center</div>
+      <p class="eco-desc">15,000 sq ft wet lab on the second floor of Covington&#8217;s OneNKY Center, near the Roebling Bridge. Home to Simbryo Technologies, Clareo Biosciences, and PAN Biologics. Nucleus of NKY biotech growth.</p>
+      <a href="https://linknky.com/business/entrepreneurship/2025/09/17/lifesciky-welcomes-three-biotech-startups-to-covingtons-new-onenky-center/" target="_blank" rel="noopener"><span class="eco-tag">OneNKY Center &#8599;</span></a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     NOTES / DISCLAIMER
+     ============================================================ -->
+<div class="section" id="notes">
+  <h2 class="section-title">&#128203; Notes &amp; Sources</h2>
+  <div class="notes-box">
+    <h3>Disclaimer</h3>
+    <p>
+      This report is published by Angel Capital on <strong>June 2, 2026</strong> for informational
+      purposes only and does not constitute investment advice. Company details, funding amounts,
+      and raise statuses are sourced from public filings, state announcements, press releases,
+      and ecosystem publications as of the report date. Active raise status may change.
+      Investors should conduct independent due diligence before making any investment decision.
+      Kentucky Angel Investment Tax Credit eligibility requires separate application and
+      certification by both investor and company through KY Innovation.
+    </p>
+    <br>
+    <h3>Primary Sources</h3>
+    <ul class="sources-list">
+      <li><a href="https://www.kstc.org/post/state-of-startups-kentucky-q2-fy26-startup-news" target="_blank" rel="noopener">KSTC &#8212; State of Startups: Kentucky Q2 FY26</a></li>
+      <li><a href="https://newkentuckyhome.ky.gov/Newsroom/NewsPage/20260226_SBIRAwardees" target="_blank" rel="noopener">KY Cabinet for Economic Development &#8212; Feb 2026 SBIR Awards ($862K to 8 companies)</a></li>
+      <li><a href="https://www.keyhorse.vc/post/keyhorse-capital-launches-2026-q1-investment-cycle-for-eligible-kentucky-companies" target="_blank" rel="noopener">Keyhorse Capital &#8212; 2026 Q1 Investment Cycle</a></li>
+      <li><a href="https://www.finsmes.com/2026/05/another-nine-raises-2m-in-funding.html" target="_blank" rel="noopener">FinSMEs &#8212; Another Nine Raises $2M (May 2026)</a></li>
+      <li><a href="https://www.boomerang.vc/boomerang-ventures-backs-wicked-technologies-with-series-a2-funding-to-transform-incontinence-care/" target="_blank" rel="noopener">Boomerang Ventures &#8212; Wicked Technologies Series A2 ($2.1M)</a></li>
+      <li><a href="https://linknky.com/business/entrepreneurship/2025/09/17/lifesciky-welcomes-three-biotech-startups-to-covingtons-new-onenky-center/" target="_blank" rel="noopener">LINK NKY &#8212; LifeSciKY / OneNKY Center Biotech Tenants</a></li>
+      <li><a href="https://finance.yahoo.com/news/simbryo-technologies-introduces-personalized-assay-120000208.html" target="_blank" rel="noopener">Simbryo Technologies &#8212; Simbryo FX Launch (Oct 2025)</a></li>
+      <li><a href="https://www.crunchbase.com/organization/desicorp" target="_blank" rel="noopener">DesiCorp &#8212; Crunchbase Profile &amp; Funding</a></li>
+      <li><a href="https://research.louisville.edu/news/clareo-biosciences-unlocks-potential-immune-profiling" target="_blank" rel="noopener">UofL Research &#8212; Clareo Biosciences</a></li>
+      <li><a href="https://www.render.capital/portfolio" target="_blank" rel="noopener">Render Capital Portfolio</a></li>
+      <li><a href="https://www.startuplouisville.com" target="_blank" rel="noopener">Startup Louisville Ecosystem Hub</a></li>
+      <li><a href="https://newkentuckyhome.ky.gov/entrepreneurship/Investor_Information" target="_blank" rel="noopener">KY Angel Investment Tax Credit Program</a></li>
+      <li><a href="https://www.cflouisville.org/community-support/vogt-awards/" target="_blank" rel="noopener">Community Foundation of Louisville &#8212; Vogt Awards</a></li>
+    </ul>
+    <br>
+    <p><em>YTD KY deals figure (76 funded / $187.5M) sourced from KSTC Q2 FY26 report published January 29, 2026.
+    Updated Q3 figures will be incorporated upon KSTC&#8217;s next quarterly release.</em></p>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  Generated June 2, 2026 &nbsp;&middot;&nbsp; Theme: Cobalt Blueprint &nbsp;&middot;&nbsp; Angel Capital
+  &nbsp;&middot;&nbsp; Kentuckiana Region (Louisville / NKY / S. Indiana)
+</footer>
+
+<!-- Back to Top -->
+<button id="btt" aria-label="Back to top">&#8593;</button>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+(function(){
+  // ---- Theme Toggle ----
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('themeToggle');
+  function setTheme(t){
+    html.setAttribute('data-theme', t);
+    themeBtn.textContent = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    try{ localStorage.setItem('kiana-theme', t); }catch(e){}
+  }
+  var saved;
+  try{ saved = localStorage.getItem('kiana-theme'); }catch(e){}
+  setTheme(saved || 'dark');
+  themeBtn.addEventListener('click', function(){
+    setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // ---- Filter & Search ----
+  var cards = Array.from(document.querySelectorAll('.card'));
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var searchInput = document.getElementById('searchInput');
+  var noResults = document.getElementById('noResults');
+  var activeFilter = 'all';
+  var searchVal = '';
+
+  function applyFilters(){
+    var visible = 0;
+    cards.forEach(function(c){
+      var af = activeFilter;
+      var mf = true;
+      if(af === 'all') mf = true;
+      else if(af === 'raising') mf = c.dataset.raising === 'true';
+      else if(af === 'thesis') mf = c.dataset.thesis === 'true';
+      else if(af === 'SBIR/Grant') mf = c.querySelector('.bdg-sbir') !== null;
+      else {
+        var sec = (c.dataset.sector || '').toLowerCase();
+        var loc = (c.dataset.location || '').toLowerCase();
+        var fLow = af.toLowerCase();
+        mf = sec.includes(fLow) || loc.includes(fLow);
+      }
+      var ms = true;
+      if(searchVal){
+        var text = c.textContent.toLowerCase();
+        ms = text.includes(searchVal);
+      }
+      var show = mf && ms;
+      c.classList.toggle('hidden', !show);
+      if(show) visible++;
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', function(){
+    searchVal = this.value.trim().toLowerCase();
+    applyFilters();
+  });
+
+  // ---- Back to Top ----
+  var btt = document.getElementById('btt');
+  window.addEventListener('scroll', function(){
+    btt.classList.toggle('show', window.scrollY > 400);
+  });
+  btt.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // ---- Nav active on scroll ----
+  var sections = Array.from(document.querySelectorAll('section[id], div.section[id]'));
+  var navLinks = document.querySelectorAll('.header-nav a');
+  window.addEventListener('scroll', function(){
+    var cur = '';
+    sections.forEach(function(s){
+      if(window.scrollY >= s.offsetTop - 120) cur = s.getAttribute('id');
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+})();
+</script>
+</body>
+</html>
